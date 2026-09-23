@@ -1,0 +1,10 @@
+# The run scripts are executed under WSL2 and on the LIACS node, so they must
+# keep LF endings no matter which machine checks them out.
+*.sh text eol=lf
+*.py text eol=lf
+*.tex text eol=lf
+*.bib text eol=lf
+*.jsonl text eol=lf
+*.csv text eol=lf
+*.md text eol=lf
+*.png binary
