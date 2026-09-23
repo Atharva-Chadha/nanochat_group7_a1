@@ -1,0 +1,836 @@
+{
+ "compression": [
+  {
+   "text": "English (own)",
+   "bytes": 396,
+   "chars": 396,
+   "ours-8k": {
+    "tokens": 92,
+    "bytes_per_token": 4.304347826086956,
+    "tokens_per_char": 0.23232323232323232
+   },
+   "ours-32k": {
+    "tokens": 74,
+    "bytes_per_token": 5.351351351351352,
+    "tokens_per_char": 0.18686868686868688
+   },
+   "gpt2-50k": {
+    "tokens": 74,
+    "bytes_per_token": 5.351351351351352,
+    "tokens_per_char": 0.18686868686868688
+   },
+   "gpt4-100k": {
+    "tokens": 74,
+    "bytes_per_token": 5.351351351351352,
+    "tokens_per_char": 0.18686868686868688
+   }
+  },
+  {
+   "text": "Python code",
+   "bytes": 377,
+   "chars": 377,
+   "ours-8k": {
+    "tokens": 175,
+    "bytes_per_token": 2.1542857142857144,
+    "tokens_per_char": 0.46419098143236076
+   },
+   "ours-32k": {
+    "tokens": 151,
+    "bytes_per_token": 2.4966887417218544,
+    "tokens_per_char": 0.4005305039787798
+   },
+   "gpt2-50k": {
+    "tokens": 162,
+    "bytes_per_token": 2.3271604938271606,
+    "tokens_per_char": 0.4297082228116711
+   },
+   "gpt4-100k": {
+    "tokens": 123,
+    "bytes_per_token": 3.065040650406504,
+    "tokens_per_char": 0.32625994694960214
+   }
+  },
+  {
+   "text": "Numbers",
+   "bytes": 183,
+   "chars": 183,
+   "ours-8k": {
+    "tokens": 105,
+    "bytes_per_token": 1.7428571428571429,
+    "tokens_per_char": 0.5737704918032787
+   },
+   "ours-32k": {
+    "tokens": 100,
+    "bytes_per_token": 1.83,
+    "tokens_per_char": 0.546448087431694
+   },
+   "gpt2-50k": {
+    "tokens": 82,
+    "bytes_per_token": 2.231707317073171,
+    "tokens_per_char": 0.44808743169398907
+   },
+   "gpt4-100k": {
+    "tokens": 91,
+    "bytes_per_token": 2.010989010989011,
+    "tokens_per_char": 0.4972677595628415
+   }
+  },
+  {
+   "text": "Korean",
+   "bytes": 134,
+   "chars": 54,
+   "ours-8k": {
+    "tokens": 134,
+    "bytes_per_token": 1.0,
+    "tokens_per_char": 2.4814814814814814
+   },
+   "ours-32k": {
+    "tokens": 122,
+    "bytes_per_token": 1.098360655737705,
+    "tokens_per_char": 2.259259259259259
+   },
+   "gpt2-50k": {
+    "tokens": 118,
+    "bytes_per_token": 1.1355932203389831,
+    "tokens_per_char": 2.185185185185185
+   },
+   "gpt4-100k": {
+    "tokens": 51,
+    "bytes_per_token": 2.627450980392157,
+    "tokens_per_char": 0.9444444444444444
+   }
+  },
+  {
+   "text": "German",
+   "bytes": 112,
+   "chars": 107,
+   "ours-8k": {
+    "tokens": 58,
+    "bytes_per_token": 1.9310344827586208,
+    "tokens_per_char": 0.5420560747663551
+   },
+   "ours-32k": {
+    "tokens": 47,
+    "bytes_per_token": 2.382978723404255,
+    "tokens_per_char": 0.4392523364485981
+   },
+   "gpt2-50k": {
+    "tokens": 44,
+    "bytes_per_token": 2.5454545454545454,
+    "tokens_per_char": 0.411214953271028
+   },
+   "gpt4-100k": {
+    "tokens": 34,
+    "bytes_per_token": 3.2941176470588234,
+    "tokens_per_char": 0.3177570093457944
+   }
+  },
+  {
+   "text": "Hindi",
+   "bytes": 147,
+   "chars": 57,
+   "ours-8k": {
+    "tokens": 147,
+    "bytes_per_token": 1.0,
+    "tokens_per_char": 2.5789473684210527
+   },
+   "ours-32k": {
+    "tokens": 91,
+    "bytes_per_token": 1.6153846153846154,
+    "tokens_per_char": 1.5964912280701755
+   },
+   "gpt2-50k": {
+    "tokens": 87,
+    "bytes_per_token": 1.6896551724137931,
+    "tokens_per_char": 1.5263157894736843
+   },
+   "gpt4-100k": {
+    "tokens": 58,
+    "bytes_per_token": 2.5344827586206895,
+    "tokens_per_char": 1.0175438596491229
+   }
+  },
+  {
+   "text": "Emoji/accents",
+   "bytes": 75,
+   "chars": 59,
+   "ours-8k": {
+    "tokens": 41,
+    "bytes_per_token": 1.829268292682927,
+    "tokens_per_char": 0.6949152542372882
+   },
+   "ours-32k": {
+    "tokens": 31,
+    "bytes_per_token": 2.4193548387096775,
+    "tokens_per_char": 0.5254237288135594
+   },
+   "gpt2-50k": {
+    "tokens": 24,
+    "bytes_per_token": 3.125,
+    "tokens_per_char": 0.4067796610169492
+   },
+   "gpt4-100k": {
+    "tokens": 24,
+    "bytes_per_token": 3.125,
+    "tokens_per_char": 0.4067796610169492
+   }
+  },
+  {
+   "text": "ClimbMix val (2M chars)",
+   "bytes": 2002641,
+   "chars": 2000000,
+   "ours-8k": {
+    "tokens": 500045,
+    "bytes_per_token": 4.004921557059864,
+    "tokens_per_char": 0.2500225
+   },
+   "ours-32k": {
+    "tokens": 426451,
+    "bytes_per_token": 4.696063557126141,
+    "tokens_per_char": 0.2132255
+   },
+   "gpt2-50k": {
+    "tokens": 430868,
+    "bytes_per_token": 4.647922333522099,
+    "tokens_per_char": 0.215434
+   },
+   "gpt4-100k": {
+    "tokens": 416971,
+    "bytes_per_token": 4.802830412666588,
+    "tokens_per_char": 0.2084855
+   }
+  }
+ ],
+ "vocab": {
+  "ours-8k": {
+   "vocab_size": 8192,
+   "mean_token_bytes": 5.543321520224857,
+   "tokens_len_1": 256,
+   "tokens_len_ge_8": 1800,
+   "digit_only_tokens": 108,
+   "non_ascii_tokens": 165,
+   "longest_tokens": [
+    "----------------",
+    " recommendations",
+    " characteristics",
+    " transportation",
+    " sustainability",
+    " responsibility",
+    " infrastructure",
+    " implementation",
+    " identification",
+    " characteristic",
+    " understanding",
+    " technological"
+   ]
+  },
+  "ours-32k": {
+   "vocab_size": 32768,
+   "mean_token_bytes": 6.560700876095119,
+   "tokens_len_1": 256,
+   "tokens_len_ge_8": 11290,
+   "digit_only_tokens": 112,
+   "non_ascii_tokens": 410,
+   "longest_tokens": [
+    "________________________________",
+    "................................",
+    "--------------------------------",
+    "……………………",
+    " telecommunications",
+    " neurotransmitters",
+    " multidisciplinary",
+    " misunderstandings",
+    " interdisciplinary",
+    " responsibilities",
+    " neurotransmitter",
+    " misunderstanding"
+   ]
+  }
+ },
+ "probes": [
+  {
+   "probe": "1234567890",
+   "ours-8k": {
+    "n": 5,
+    "pieces": [
+     "12",
+     "34",
+     "56",
+     "78",
+     "90"
+    ]
+   },
+   "ours-32k": {
+    "n": 5,
+    "pieces": [
+     "12",
+     "34",
+     "56",
+     "78",
+     "90"
+    ]
+   },
+   "gpt4-100k": {
+    "n": 4,
+    "pieces": [
+     "123",
+     "456",
+     "789",
+     "0"
+    ]
+   }
+  },
+  {
+   "probe": "3.14159265",
+   "ours-8k": {
+    "n": 6,
+    "pieces": [
+     "3",
+     ".",
+     "14",
+     "15",
+     "92",
+     "65"
+    ]
+   },
+   "ours-32k": {
+    "n": 6,
+    "pieces": [
+     "3",
+     ".",
+     "14",
+     "15",
+     "92",
+     "65"
+    ]
+   },
+   "gpt4-100k": {
+    "n": 5,
+    "pieces": [
+     "3",
+     ".",
+     "141",
+     "592",
+     "65"
+    ]
+   }
+  },
+  {
+   "probe": "2026-09-21",
+   "ours-8k": {
+    "n": 6,
+    "pieces": [
+     "20",
+     "26",
+     "-",
+     "09",
+     "-",
+     "21"
+    ]
+   },
+   "ours-32k": {
+    "n": 6,
+    "pieces": [
+     "20",
+     "26",
+     "-",
+     "09",
+     "-",
+     "21"
+    ]
+   },
+   "gpt4-100k": {
+    "n": 6,
+    "pieces": [
+     "202",
+     "6",
+     "-",
+     "09",
+     "-",
+     "21"
+    ]
+   }
+  },
+  {
+   "probe": "$1,234.56",
+   "ours-8k": {
+    "n": 7,
+    "pieces": [
+     "$",
+     "1",
+     ",",
+     "23",
+     "4",
+     ".",
+     "56"
+    ]
+   },
+   "ours-32k": {
+    "n": 7,
+    "pieces": [
+     "$",
+     "1",
+     ",",
+     "23",
+     "4",
+     ".",
+     "56"
+    ]
+   },
+   "gpt4-100k": {
+    "n": 6,
+    "pieces": [
+     "$",
+     "1",
+     ",",
+     "234",
+     ".",
+     "56"
+    ]
+   }
+  },
+  {
+   "probe": "0x7FFF",
+   "ours-8k": {
+    "n": 6,
+    "pieces": [
+     "0",
+     "x",
+     "7",
+     "F",
+     "F",
+     "F"
+    ]
+   },
+   "ours-32k": {
+    "n": 5,
+    "pieces": [
+     "0",
+     "x",
+     "7",
+     "FF",
+     "F"
+    ]
+   },
+   "gpt4-100k": {
+    "n": 4,
+    "pieces": [
+     "0",
+     "x",
+     "7",
+     "FFF"
+    ]
+   }
+  },
+  {
+   "probe": "def fib(n): return n if n < 2 else fib(n-1) + fib(n-2)",
+   "ours-8k": {
+    "n": 27,
+    "pieces": [
+     "d",
+     "ef",
+     " fib",
+     "(",
+     "n",
+     "):",
+     " return",
+     " n",
+     " if",
+     " n",
+     " <",
+     " ",
+     "2",
+     " else",
+     " fib",
+     "(",
+     "n",
+     "-",
+     "1",
+     ")",
+     " +",
+     " fib",
+     "(",
+     "n",
+     "-",
+     "2",
+     ")"
+    ]
+   },
+   "ours-32k": {
+    "n": 23,
+    "pieces": [
+     "def",
+     " fib",
+     "(n",
+     "):",
+     " return",
+     " n",
+     " if",
+     " n",
+     " <",
+     " ",
+     "2",
+     " else",
+     " fib",
+     "(n",
+     "-",
+     "1",
+     ")",
+     " +",
+     " fib",
+     "(n",
+     "-",
+     "2",
+     ")"
+    ]
+   },
+   "gpt4-100k": {
+    "n": 23,
+    "pieces": [
+     "def",
+     " fib",
+     "(n",
+     "):",
+     " return",
+     " n",
+     " if",
+     " n",
+     " <",
+     " ",
+     "2",
+     " else",
+     " fib",
+     "(n",
+     "-",
+     "1",
+     ")",
+     " +",
+     " fib",
+     "(n",
+     "-",
+     "2",
+     ")"
+    ]
+   }
+  },
+  {
+   "probe": "    x = 1\n        y = 2\n",
+   "ours-8k": {
+    "n": 13,
+    "pieces": [
+     "   ",
+     " x",
+     " =",
+     " ",
+     "1",
+     "\n",
+     "    ",
+     "   ",
+     " y",
+     " =",
+     " ",
+     "2",
+     "\n"
+    ]
+   },
+   "ours-32k": {
+    "n": 12,
+    "pieces": [
+     "   ",
+     " x",
+     " =",
+     " ",
+     "1",
+     "\n",
+     "       ",
+     " y",
+     " =",
+     " ",
+     "2",
+     "\n"
+    ]
+   },
+   "gpt4-100k": {
+    "n": 12,
+    "pieces": [
+     "   ",
+     " x",
+     " =",
+     " ",
+     "1",
+     "\n",
+     "       ",
+     " y",
+     " =",
+     " ",
+     "2",
+     "\n"
+    ]
+   }
+  },
+  {
+   "probe": "안녕하세요 세계",
+   "ours-8k": {
+    "n": 22,
+    "pieces": [
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     " ",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�"
+    ]
+   },
+   "ours-32k": {
+    "n": 20,
+    "pieces": [
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     " �",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�"
+    ]
+   },
+   "gpt4-100k": {
+    "n": 9,
+    "pieces": [
+     "�",
+     "�",
+     "�",
+     "�",
+     "하세요",
+     " �",
+     "�",
+     "�",
+     "�"
+    ]
+   }
+  },
+  {
+   "probe": "Straße",
+   "ours-8k": {
+    "n": 5,
+    "pieces": [
+     "St",
+     "ra",
+     "�",
+     "�",
+     "e"
+    ]
+   },
+   "ours-32k": {
+    "n": 5,
+    "pieces": [
+     "St",
+     "ra",
+     "�",
+     "�",
+     "e"
+    ]
+   },
+   "gpt4-100k": {
+    "n": 2,
+    "pieces": [
+     "Stra",
+     "ße"
+    ]
+   }
+  },
+  {
+   "probe": "naïve café",
+   "ours-8k": {
+    "n": 7,
+    "pieces": [
+     "na",
+     "�",
+     "�",
+     "ve",
+     " c",
+     "af",
+     "é"
+    ]
+   },
+   "ours-32k": {
+    "n": 5,
+    "pieces": [
+     "na",
+     "ï",
+     "ve",
+     " caf",
+     "é"
+    ]
+   },
+   "gpt4-100k": {
+    "n": 4,
+    "pieces": [
+     "na",
+     "ï",
+     "ve",
+     " café"
+    ]
+   }
+  },
+  {
+   "probe": "🚀🌍😀",
+   "ours-8k": {
+    "n": 9,
+    "pieces": [
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�"
+    ]
+   },
+   "ours-32k": {
+    "n": 9,
+    "pieces": [
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�"
+    ]
+   },
+   "gpt4-100k": {
+    "n": 8,
+    "pieces": [
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�",
+     "�"
+    ]
+   }
+  },
+  {
+   "probe": "supercalifragilisticexpialidocious",
+   "ours-8k": {
+    "n": 15,
+    "pieces": [
+     "s",
+     "u",
+     "per",
+     "cal",
+     "if",
+     "rag",
+     "il",
+     "ist",
+     "ice",
+     "x",
+     "p",
+     "ial",
+     "id",
+     "oc",
+     "ious"
+    ]
+   },
+   "ours-32k": {
+    "n": 12,
+    "pieces": [
+     "super",
+     "cal",
+     "if",
+     "rag",
+     "il",
+     "ist",
+     "ice",
+     "xp",
+     "ial",
+     "id",
+     "oc",
+     "ious"
+    ]
+   },
+   "gpt4-100k": {
+    "n": 11,
+    "pieces": [
+     "sup",
+     "erc",
+     "al",
+     "if",
+     "rag",
+     "il",
+     "istic",
+     "exp",
+     "ial",
+     "id",
+     "ocious"
+    ]
+   }
+  },
+  {
+   "probe": "unbelievably",
+   "ours-8k": {
+    "n": 6,
+    "pieces": [
+     "un",
+     "b",
+     "el",
+     "ie",
+     "v",
+     "ably"
+    ]
+   },
+   "ours-32k": {
+    "n": 4,
+    "pieces": [
+     "un",
+     "bel",
+     "iev",
+     "ably"
+    ]
+   },
+   "gpt4-100k": {
+    "n": 3,
+    "pieces": [
+     "un",
+     "belie",
+     "vably"
+    ]
+   }
+  }
+ ]
+}
