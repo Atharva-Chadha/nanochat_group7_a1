@@ -11,7 +11,7 @@ s = open(os.path.join(ROOT, "main.tex"), encoding="utf-8").read()
 bibsrc = open(os.path.join(ROOT, "main.bib"), encoding="utf-8").read()
 
 labels = set(re.findall(r"\\label\{([^}]*)\}", s))
-refs = set(re.findall(r"\\ref\{([^}]*)\}", s))
+refs = {r.strip() for g in re.findall(r"\\(?:[cC]ref|ref)\{([^}]*)\}", s) for r in g.split(",")}
 cites = {c.strip() for g in re.findall(r"\\cite[tp]?\{([^}]*)\}", s) for c in g.split(",")}
 bib = set(re.findall(r"@\w+\{([^,]+),", bibsrc))
 
