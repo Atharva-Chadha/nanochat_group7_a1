@@ -1,0 +1,292 @@
+===== T=0.1 :: What is the capital of France?
+2026-09-22 22:01:22,341 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-22 22:01:22,341 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /local/s4785851/nanochat-data/chatsft_checkpoints/d10 with step 934
+2026-09-22 22:01:22,870 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 32768, 'n_layer': 10, 'n_head': 5, 'n_kv_head': 5, 'n_embd': 640, 'window_pattern': 'L'}
+Autodetected device type: cuda
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: The capital of France is Paris. Paris is a city located in the northern part of France, near the Seine River and the French Riviera. It is a major economic and cultural center, known for its rich history, art, architecture, and cuisine. Paris is also home to the famous Eiffel Tower, the Louvre Museum, and the Palace of Versailles.<|assistant_end|>
+===== T=0.1 :: Write a short poem about the sea.
+2026-09-22 22:01:28,324 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-22 22:01:28,324 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /local/s4785851/nanochat-data/chatsft_checkpoints/d10 with step 934
+2026-09-22 22:01:28,840 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 32768, 'n_layer': 10, 'n_head': 5, 'n_kv_head': 5, 'n_embd': 640, 'window_pattern': 'L'}
+Autodetected device type: cuda
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: In the depths of the ocean, where the waves crash,
+A symphony of sound, a symphony of light,
+A symphony of the sea, a symphony of sound.
+
+The waves crash against the shore, a crashing wave,
+A soothing melody, a symphony of sound,
+A symphony of the sea, a symphony of sound.
+
+The tides, a gentle breeze, a soothing melody,
+A symphony of the sea, a symphony of sound,
+A symphony of the sea, a symphony of sound.
+
+The waves crash against the shore, a crashing wave,
+A soothing melody, a symphony of sound,
+A symphony of the sea, a symphony of sound,
+A symphony of sound.
+
+The waves crash against the shore, a crashing wave,
+A soothing melody, a symphony of sound,
+A symphony of the sea, a symphony of sound,
+A symphony of sound.
+
+The waves crash against the shore, a crashing wave,
+A soothing melody, a symphony of sound,
+A symphony of the sea, a symphony of sound,
+A symphony of sound.
+
+The waves crash against the shore, a crashing wave,
+A soothing melody, a symphony of sound,
+A symphony of the sea, a symphony of sound,
+A symphony of sound.
+
+The waves crash against the shore, a crashing
+===== T=0.1 :: Why is the sky blue?
+2026-09-22 22:01:36,640 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-22 22:01:36,641 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /local/s4785851/nanochat-data/chatsft_checkpoints/d10 with step 934
+2026-09-22 22:01:37,127 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 32768, 'n_layer': 10, 'n_head': 5, 'n_kv_head': 5, 'n_embd': 640, 'window_pattern': 'L'}
+Autodetected device type: cuda
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: The sky blue is a phenomenon that occurs because the Earth's atmosphere contains a layer of gases that are not visible to the naked eye. These gases are primarily composed of nitrogen and oxygen, which are the building blocks of life. When sunlight enters the Earth's atmosphere, it encounters these gases, causing them to scatter and change color. This is because the Earth's atmosphere is composed of nitrogen and oxygen, and the gases in the atmosphere are not visible to the naked eye.
+
+As a result, the sky blue is often seen in the sky during the day, when the sun is low in the sky and the Earth's atmosphere is not visible to the naked eye. This is because the Earth's atmosphere is not able to absorb or scatter the sunlight, and the gases in the atmosphere are not able to scatter the sunlight, resulting in a blue color.
+
+The sky blue is also thought to be a sign of the Earth's rotation, which is the process by which the Earth rotates around the Sun. The sky blue is a sign of the Earth's rotation, which is the process by which the Earth rotates around the Sun. This rotation is thought to be responsible for the blue color of the sky, which is a result of the Earth's rotation.<|assistant_end|>
+===== T=0.1 :: If I have 3 apples and buy 4 more, how many apples do I have?
+2026-09-22 22:01:45,482 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-22 22:01:45,483 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /local/s4785851/nanochat-data/chatsft_checkpoints/d10 with step 934
+2026-09-22 22:01:46,018 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 32768, 'n_layer': 10, 'n_head': 5, 'n_kv_head': 5, 'n_embd': 640, 'window_pattern': 'L'}
+Autodetected device type: cuda
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: To find out how many apples you have, let's break down the information you have. You have 3 apples and buy 4 more, which means you have 3 + 4 = 7 apples. 
+
+Since you have 7 apples, you can calculate the number of apples you have by dividing the total number of apples by the number of apples you have. 
+
+7 apples / 7 apples per apple = 3 apples per apple.
+
+So, you have 3 apples and 3 apples.<|assistant_end|>
+===== T=0.1 :: Explain in two sentences what a transformer neural network is.
+2026-09-22 22:01:51,785 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-22 22:01:51,786 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /local/s4785851/nanochat-data/chatsft_checkpoints/d10 with step 934
+2026-09-22 22:01:52,282 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 32768, 'n_layer': 10, 'n_head': 5, 'n_kv_head': 5, 'n_embd': 640, 'window_pattern': 'L'}
+Autodetected device type: cuda
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: A transformer neural network is a type of neural network that uses self-attention mechanisms to weigh the importance of different weights in a model. It's a type of neural network that consists of two main components: the encoder and the decoder. The encoder takes in a set of input features and produces a output vector, which is a weighted average of the input features. The decoder then uses this weighted average to make predictions about the input features, taking into account the weights of the input features. This process is repeated for each input feature, allowing the network to learn the relationships between the input features and the output features. The transformer's output is then fed back into the encoder, where it's fed back into the decoder, where it's fed back into the encoder, and so on, until the model is trained on the entire input set.<|assistant_end|>
+===== T=0.7 :: What is the capital of France?
+2026-09-22 22:01:58,914 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-22 22:01:58,914 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /local/s4785851/nanochat-data/chatsft_checkpoints/d10 with step 934
+2026-09-22 22:01:59,415 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 32768, 'n_layer': 10, 'n_head': 5, 'n_kv_head': 5, 'n_embd': 640, 'window_pattern': 'L'}
+Autodetected device type: cuda
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: The capital of France, Paris, is Paris. It is a city located in the northern part of France and is famous for its iconic landmarks, such as the Eiffel Tower, the Louvre Museum, and Notre-Dame Cathedral. Paris is also known for its charming neighborhoods, like Montmartre and Le Marais, which are filled with artists, street performers, and cafes, making it a vibrant and eclectic city.<|assistant_end|>
+===== T=0.7 :: Write a short poem about the sea.
+2026-09-22 22:02:04,969 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-22 22:02:04,970 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /local/s4785851/nanochat-data/chatsft_checkpoints/d10 with step 934
+2026-09-22 22:02:05,489 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 32768, 'n_layer': 10, 'n_head': 5, 'n_kv_head': 5, 'n_embd': 640, 'window_pattern': 'L'}
+Autodetected device type: cuda
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: In the depths of darkness, where waves crash,
+A lighthouse stands, a beacon's light,
+The sound of its gentle lapping,
+A symphony of sound, a symphony of rhyme.
+
+In the ocean's depths, where seas drift,
+A sea of waves, a sea of ripples,
+A rhythm that pulses, a heartbeat of calm,
+A heartbeat that speaks, a heartbeat that sways.
+
+The wind stirs, a gentle breeze,
+A slow, steady heartbeat, a soothing sight,
+A heartbeat of sound, a heartbeat that echoes,
+A heartbeat that echoes, a heartbeat that sways.
+
+In the heart of the sea, a soul is born,
+A soul of the ocean, a soul of the night,
+A soul of the soul of the land,
+A soul of the sea, a soul of the wind.<|assistant_end|>
+===== T=0.7 :: Why is the sky blue?
+2026-09-22 22:02:12,132 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-22 22:02:12,133 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /local/s4785851/nanochat-data/chatsft_checkpoints/d10 with step 934
+2026-09-22 22:02:12,648 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 32768, 'n_layer': 10, 'n_head': 5, 'n_kv_head': 5, 'n_embd': 640, 'window_pattern': 'L'}
+Autodetected device type: cuda
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: The sky blue is primarily due to the uneven distribution of light around the Earth by the Earth's atmosphere and oceans. This phenomenon is primarily caused by the tilt of the Earth's axis, which is approximately 23.5 degrees. The amount of solar radiation received by the Earth's surface is approximately 18.5 degrees per year, which is roughly the amount of light that is absorbed or scattered by the atmosphere during the Northern Hemisphere's summer and winter.
+
+This uneven distribution of light allows the Earth's atmosphere to play a significant role in shaping the color we see. The Earth's orbit around the Sun is tilted at an angle of about 23.5 degrees, which means that the amount of solar radiation received by the Earth's atmosphere varies throughout the year. As the Earth orbits the Sun, the amount of solar radiation is distributed over the entire duration of the year, which gives the sky a blue hue.
+
+This uneven distribution of light, combined with the Earth's orbit around the Sun, results in the sky blue. This phenomenon is often referred to as the "Blue Horizon" effect, where the Earth's atmosphere is surrounded by a layer of cloud-like clouds, which can influence the color we see.<|assistant_end|>
+===== T=0.7 :: If I have 3 apples and buy 4 more, how many apples do I have?
+2026-09-22 22:02:20,259 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-22 22:02:20,260 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /local/s4785851/nanochat-data/chatsft_checkpoints/d10 with step 934
+2026-09-22 22:02:20,776 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 32768, 'n_layer': 10, 'n_head': 5, 'n_kv_head': 5, 'n_embd': 640, 'window_pattern': 'L'}
+Autodetected device type: cuda
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: To find out how many apples you have, let's break down the information given. We have 3 apples and 4 more, so we need to subtract the number of apples you purchased from the number of apples you have. 
+
+This gives us 3 - 4 = 2 apples. We then subtract this from the number of apples you have, which is 2. So, you have 2 apples. Now, we need to find out how many apples you have, so we subtract this from the number of apples you have. 2 apples - 2 apples = 1 apple. 
+
+Therefore, you have 1 apple.<|assistant_end|>
+===== T=0.7 :: Explain in two sentences what a transformer neural network is.
+2026-09-22 22:02:26,901 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-22 22:02:26,901 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /local/s4785851/nanochat-data/chatsft_checkpoints/d10 with step 934
+2026-09-22 22:02:27,406 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 32768, 'n_layer': 10, 'n_head': 5, 'n_kv_head': 5, 'n_embd': 640, 'window_pattern': 'L'}
+Autodetected device type: cuda
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: A transformer neural network (NNP) is a type of artificial neural network that uses a self-attention mechanism to capture and process input data. Unlike traditional neural networks, which rely on labeled data, a transformer has a self-attention mechanism that allows the network to capture and store input data in sequential units, such as images or text. This makes it ideal for tasks like image recognition, text processing, and text classification, where the goal is to extract relevant information from the input data.<|assistant_end|>
+===== T=1.5 :: What is the capital of France?
+2026-09-22 22:02:33,089 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-22 22:02:33,090 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /local/s4785851/nanochat-data/chatsft_checkpoints/d10 with step 934
+2026-09-22 22:02:33,610 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 32768, 'n_layer': 10, 'n_head': 5, 'n_kv_head': 5, 'n_embd': 640, 'window_pattern': 'L'}
+Autodetected device type: cuda
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: The capital of France, France, is Annecy, France, an French-speaking state governed by French governance and administrative hierarchy. The most commonly referred to as the Eiffel Tower and the city in Paris can be broken down due to its location in the southern French Riviera, a picturesque network of Paris and Loire Valley that was initially dominated by artists of the Arts and Abyines and eventually the Franz Josef region. French royalty from France, originally owned by prominent social-class artists like Claro Nonino Vatica et de La Coeur des Belésentes vous pla��t al-Dobardé avec la Mersewhereas pour les Paris �� Saint-Adicente, séance de sans nir.<|assistant_end|>
+===== T=1.5 :: Write a short poem about the sea.
+2026-09-22 22:02:40,173 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-22 22:02:40,174 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /local/s4785851/nanochat-data/chatsft_checkpoints/d10 with step 934
+2026-09-22 22:02:40,698 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 32768, 'n_layer': 10, 'n_head': 5, 'n_kv_head': 5, 'n_embd': 640, 'window_pattern': 'L'}
+Autodetected device type: cuda
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: In the quiet depths, where waters so tremble,
+Like whispers that echo across the abode.
+The whispers, echo through our dreams come,
+The echoes of sea, of secrets that still reside.
+
+As sunset descends on the horizon,
+Moonlight w Reigns as stars dance close,
+The fire that soals on our minds,
+It is a bridge that guides our spirits wide,
+From our heart to our dreams.
+
+The salty sea, in constant gale,
+It sways me, to life's whirlwind in its sleep!
+It is our life in retreat far,
+The sea so dear to my soul, above me.
+
+In its swirling hues, life has thrived,
+In every stroke of the wind, and the tears shed,
+From birth to love, and new again,
+Lovers warm our hearts' soul's grace.<|assistant_end|>
+===== T=1.5 :: Why is the sky blue?
+2026-09-22 22:02:47,433 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-22 22:02:47,434 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /local/s4785851/nanochat-data/chatsft_checkpoints/d10 with step 934
+2026-09-22 22:02:47,964 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 32768, 'n_layer': 10, 'n_head': 5, 'n_kv_head': 5, 'n_embd': 640, 'window_pattern': 'L'}
+Autodetected device type: cuda
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: The sky's color can also appear at odd angle because it has shifted around due to temperature changes from summer to winter and sun exposure. However, this property applies regardless of the specific sky characteristics.
+
+During periods where warm temperatures are low-40°F and cold temperatures are typical, the sky transitions from the darker hue to the lighter pinkish-white sky due to differences in altitude. So, even under direct sunlight, there are shades or undertones around the sky appearing pink or other sky patterns in turn.
+
+You're likely referring to warm, bright, or reddish hues on different days. If sky temperature trends tend to be higher at warm nights (60 degrees Celsius or 54 degrees Fahrenheit), other sky colors might have a light to medium shade background. Conversely, the same summer day can expect an immediate darkening effect to create the darker blues – known as golden tones and lighter hues due to high sunshine stress.
+
+It's essential to look for these variations and apply them thoughtfully to distinguish from longer, fixed colors in various atmospheric conditions, especially the coldest daytime. Observe any differences in the sky spectrum or coloration during your visit to look for variations that may have affected your understanding of the sky, like sunlight patterns or special sky features like thunderstorms, cloud formations, or artificial satellite imagery.
+
+Keep in
+===== T=1.5 :: If I have 3 apples and buy 4 more, how many apples do I have?
+2026-09-22 22:02:55,808 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-22 22:02:55,809 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /local/s4785851/nanochat-data/chatsft_checkpoints/d10 with step 934
+2026-09-22 22:02:56,329 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 32768, 'n_layer': 10, 'n_head': 5, 'n_kv_head': 5, 'n_embd': 640, 'window_pattern': 'L'}
+Autodetected device type: cuda
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: To find out how much apples you have compared to just 4 other apples, you simply need to multiply 3 apple count by the number of other apples.
+
+Think of it like buying another apple: each additional additional apple will make those another apple less than the first. So, the product of your initial two apples remains the same: 3 apple count (in a row) * 4 apple count (each other fruit).<|assistant_end|>
+===== T=1.5 :: Explain in two sentences what a transformer neural network is.
+2026-09-22 22:03:01,879 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-22 22:03:01,880 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /local/s4785851/nanochat-data/chatsft_checkpoints/d10 with step 934
+2026-09-22 22:03:02,407 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 32768, 'n_layer': 10, 'n_head': 5, 'n_kv_head': 5, 'n_embd': 640, 'window_pattern': 'L'}
+Autodetected device type: cuda
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: A transformer neural network (PNN) - what used to be in demand in the first place was transformers for transformers that utilized a self-attention layer for safety. Transformers are self-balancing transformers whose core elements are changed in sync during the primary time range, rather than switching between core elements when they were insufficient. This leads to lower efficiency rates for motor vehicle manufacturers who wanted to maintain and manage vehicle maintenance schedules for extended durations. Over time, their efficiency rates declined; more traditional representations began on a rotating basis that required frequent adjustment. This paradigm shift fundamentally increased the lifespan and sustainability of transformers around the world.<|assistant_end|>
