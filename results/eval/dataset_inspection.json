@@ -1,0 +1,31 @@
+{
+  "SmolTalk train": {
+    "rows": 460341,
+    "mean_tokens": 791.6825,
+    "median_tokens": 858.5,
+    "max_tokens": 2048,
+    "mean_supervised_share": 0.7305057684918377,
+    "est_tokens_per_epoch": 364443913.7325
+  },
+  "MMLU auxiliary_train": {
+    "rows": 99842,
+    "mean_tokens": 383.346,
+    "median_tokens": 404.0,
+    "max_tokens": 1169,
+    "mean_supervised_share": 0.007567557848162267,
+    "est_tokens_per_epoch": 38274031.332
+  },
+  "GSM8K train": {
+    "rows": 7473,
+    "mean_tokens": 174.313,
+    "median_tokens": 164.0,
+    "max_tokens": 427,
+    "mean_supervised_share": 0.5641717583029618,
+    "est_tokens_per_epoch": 1302641.0489999999
+  },
+  "stage1_rows": 329418,
+  "stage2_rows": 460341,
+  "upstream_rows": 789759,
+  "stage1_est_tokens": 120032658.192,
+  "stage2_est_tokens": 364443913.7325
+}
