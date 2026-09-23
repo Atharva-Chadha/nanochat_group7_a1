@@ -137,6 +137,13 @@ def run_one(spec):
             wrap(tok, p, chat), num_samples=1, max_tokens=args.max_tokens,
             temperature=args.temperature, top_k=args.top_k, seed=args.seed)
         text = tok.decode(out[0])
+        # decode renders the special tokens, so drop the scaffolding and the
+        # echoed prompt and keep only what the model added
+        for marker in ("<|bos|>", "<|user_start|>", "<|user_end|>", "<|assistant_start|>"):
+            text = text.replace(marker, "")
+        cut = text.find(p)
+        if cut != -1:
+            text = text[cut + len(p):]
         text = text.split("<|assistant_end|>")[0]
         gens[p] = {"text": " ".join(text.split()), "seconds": round(time.time() - t0, 2)}
         print("  %-42s %s" % (p[:42], gens[p]["text"][:70]))
