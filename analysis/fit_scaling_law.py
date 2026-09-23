@@ -18,6 +18,10 @@ with open(_paths.D2_LOG,
           encoding="utf-8") as fh:
     for line in fh:
         r = json.loads(line)
+        if r.get("event") == "run_start":
+            # the log is appended to, and an aborted first attempt sits before the real run
+            d2["val"], d2["flops"] = [], {}
+            continue
         if "val/bpb" in r:
             d2["val"].append((r["step"], r["val/bpb"]))
             d2["flops"][r["step"]] = r["total_training_flops"]
