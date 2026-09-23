@@ -1,0 +1,89 @@
+{
+  "args": {
+    "models": [
+      "base:d10",
+      "sft:d10"
+    ],
+    "prompts": "chat",
+    "prompt_file": null,
+    "temperature": 0.7,
+    "top_k": 50,
+    "max_tokens": 48,
+    "seed": 42,
+    "name": "d10_stages",
+    "interactive": false,
+    "out_dir": "."
+  },
+  "models": [
+    {
+      "spec": "base:d10",
+      "source": "base",
+      "tag": "d10",
+      "params": 195952986,
+      "depth": 10,
+      "d_model": 640,
+      "heads": 5,
+      "window": "L",
+      "step": 1605,
+      "val_bpb": 0.8877691699134013
+    },
+    {
+      "spec": "sft:d10",
+      "source": "sft",
+      "tag": "d10",
+      "params": 195952986,
+      "depth": 10,
+      "d_model": 640,
+      "heads": 5,
+      "window": "L",
+      "step": 934,
+      "val_bpb": 0.3851023445313266
+    }
+  ],
+  "generations": {
+    "base:d10": {
+      "What is the capital of France?": {
+        "text": "The capital of France, Lansdow, is the capital of the Republic of France. The capital is located at the mouth of the Nile, along the Nile River, and is surrounded by a sea of volcanic rocks. Lansd",
+        "seconds": 1.11
+      },
+      "Write a short poem about the sea.": {
+        "text": "If you write a short poem in a line, you can include several adjectives, and you can use a variety of them to create a short poem. How to write a poem in a line? To Write a Short Poem On How",
+        "seconds": 0.65
+      },
+      "Why is the sky blue?": {
+        "text": "The sky is blue, the sea is blue, and the sun is blue. The sky is blue. The sky is blue. The sky is blue. The sky is blue. The sky is blue. The sky is blue. The sky",
+        "seconds": 0.65
+      },
+      "If I have 3 apples and buy 4 more, how many apples do I have?": {
+        "text": "I have 3 more apples so I have 4 more apples! I know I need 5 more apples, but I have 3 more apples too, so I have 4 more apples so I need 5 more apples so I",
+        "seconds": 0.67
+      },
+      "Explain in two sentences what a transformer neural network is.": {
+        "text": "Explain in two sentences in two sentences what a transformer neural network is. Explain in two sentences what a transformer neural network is. Explain in two sentences in two sentences what a transformer neural network is. What is an AC transformer? How does a",
+        "seconds": 0.64
+      }
+    },
+    "sft:d10": {
+      "What is the capital of France?": {
+        "text": "The capital of France, Paris, is Paris. It is a city located in the northern part of France and is famous for its iconic landmarks, such as the Eiffel Tower, the Louvre Museum, and Notre-Dame",
+        "seconds": 0.65
+      },
+      "Write a short poem about the sea.": {
+        "text": "In the depths of darkness, where waves crash, A lighthouse stands, a beacon's light, The sound of its gentle lapping, A symphony of sound, a symphony of rhyme. In the ocean's depths, where seas drift",
+        "seconds": 0.65
+      },
+      "Why is the sky blue?": {
+        "text": "The sky blue is primarily due to the uneven distribution of light around the Earth by the Earth's atmosphere and oceans. This phenomenon is primarily caused by the tilt of the Earth's axis, which is approximately 23.5 degrees. The amount",
+        "seconds": 0.66
+      },
+      "If I have 3 apples and buy 4 more, how many apples do I have?": {
+        "text": "To find out how many apples you have, let's break down the information given. We have 3 apples and 4 more, so we need to subtract the number of apples you purchased from the number of apples you have. This",
+        "seconds": 0.65
+      },
+      "Explain in two sentences what a transformer neural network is.": {
+        "text": "A transformer neural network (NNP) is a type of artificial neural network that uses a self-attention mechanism to capture and process input data. Unlike traditional neural networks, which rely on labeled data, a transformer has a self-attention mechanism",
+        "seconds": 0.64
+      }
+    }
+  }
+}
