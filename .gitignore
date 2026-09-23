@@ -2,12 +2,12 @@
 # Checkpoints are hundreds of MB each; they are linked from the report instead.
 *.pt
 *.safetensors
-base_checkpoints/
-chatsft_checkpoints/
-tokenizer/
-tokenizer_v*/
-base_data/
-task_data/
+/base_checkpoints/
+/chatsft_checkpoints/
+/tokenizer/
+/tokenizer_v*/
+/base_data/
+/task_data/
 
 # LaTeX build products
 *.aux
