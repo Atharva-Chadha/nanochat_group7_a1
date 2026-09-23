@@ -1,0 +1,113 @@
+{
+  "args": {
+    "models": [
+      "base:d6",
+      "base:d10"
+    ],
+    "prompts": "probes",
+    "prompt_file": null,
+    "temperature": 0.0,
+    "top_k": 50,
+    "max_tokens": 48,
+    "seed": 42,
+    "name": "depths",
+    "interactive": false,
+    "out_dir": "."
+  },
+  "models": [
+    {
+      "spec": "base:d6",
+      "source": "base",
+      "tag": "d6",
+      "params": 73531538,
+      "depth": 6,
+      "d_model": 384,
+      "heads": 3,
+      "window": "L",
+      "step": 1062,
+      "val_bpb": 1.0128613238150317
+    },
+    {
+      "spec": "base:d10",
+      "source": "base",
+      "tag": "d10",
+      "params": 195952986,
+      "depth": 10,
+      "d_model": 640,
+      "heads": 5,
+      "window": "L",
+      "step": 1605,
+      "val_bpb": 0.8877691699134013
+    }
+  ],
+  "generations": {
+    "base:d6": {
+      "The capital of France is": {
+        "text": "the capital of the world. The capital of France is the capital of the world. The capital of France is the capital of the world. The capital of France is the capital of the world. The capital of France is the capital of the",
+        "seconds": 0.73
+      },
+      "The chemical symbol of gold is": {
+        "text": "the gold symbol. It is a symbol of purity and purity. It is a symbol of purity and innocence. It is a symbol of purity and innocence. It is a symbol of purity and innocence. It is a symbol of",
+        "seconds": 0.42
+      },
+      "The planets of the solar system are": {
+        "text": "not only the largest and most abundant, but also the largest and most abundant. The planets of the solar system are also the largest and most abundant, and the largest and most abundant. The planets of the solar system are also the largest and",
+        "seconds": 0.42
+      },
+      "The opposite of hot is": {
+        "text": "the hot. The hot is the hot. The hot is the hot. The hot is the hot. The hot is the hot. The hot is the hot. The hot is the hot. The hot is the hot. The hot is",
+        "seconds": 0.42
+      },
+      "If yesterday was Friday, then tomorrow will be": {
+        "text": "Friday. The day was 10:00 a.m. and 10:00 a.m. The day was 10:00 a.m. and 10:00 a.m. The day was 10:00 a.m.",
+        "seconds": 0.42
+      },
+      "If 5*x + 3 = 13, then x is": {
+        "text": "the number of times the number of times the number of times the number of times the number of times the number of times the number of times the number of times the number of times the number of times the number of times the number of times",
+        "seconds": 0.41
+      },
+      "Water boils at a temperature of": {
+        "text": "100 degrees Celsius (100 degrees Fahrenheit) and 100 degrees Fahrenheit (100 degrees Celsius) at 100 degrees Celsius (100 degrees Fahrenheit). The temperature of the water is 100 degrees Celsius (10",
+        "seconds": 0.4
+      },
+      "The largest ocean on Earth is": {
+        "text": "the largest ocean on Earth. The largest ocean on Earth is the largest ocean on Earth. The largest ocean on Earth is the largest ocean on Earth. The largest ocean on Earth is the largest ocean on Earth. The largest ocean on Earth is",
+        "seconds": 0.42
+      }
+    },
+    "base:d10": {
+      "The capital of France is": {
+        "text": "the capital of the world. It is the capital of the world. It is the capital of the world. It is the capital of the world. It is the capital of the world. It is the capital of the world. It is",
+        "seconds": 0.66
+      },
+      "The chemical symbol of gold is": {
+        "text": "Au. The symbol of gold is Au. The symbol of gold is Au. The symbol of gold is Au. The symbol of gold is Au. The symbol of gold is Au. The symbol of gold is Au. The symbol of gold",
+        "seconds": 0.65
+      },
+      "The planets of the solar system are": {
+        "text": "the most massive bodies in the solar system. They are the most massive bodies in the solar system. They are the most massive bodies in the solar system. They are the most massive bodies in the solar system. They are the most massive bodies",
+        "seconds": 0.65
+      },
+      "The opposite of hot is": {
+        "text": "the cold. The cold is the opposite of the hot. The cold is the opposite of the hot. The cold is the opposite of the hot. The cold is the opposite of the hot. The cold is the opposite of the hot.",
+        "seconds": 0.65
+      },
+      "If yesterday was Friday, then tomorrow will be": {
+        "text": "Saturday. If tomorrow was Sunday, then tomorrow will be Sunday. If tomorrow was Sunday, then tomorrow will be Sunday. If tomorrow was Sunday, then tomorrow will be Sunday. If tomorrow was Sunday, then tomorrow will be Sunday. If tomorrow",
+        "seconds": 0.65
+      },
+      "If 5*x + 3 = 13, then x is": {
+        "text": "the number of moles of the element. If 5*x + 3 = 13, then x is the number of moles of the element. If 5*x + 3 = 13, then x is the number",
+        "seconds": 0.65
+      },
+      "Water boils at a temperature of": {
+        "text": "1,000 degrees Fahrenheit. The temperature of water is 1,000 degrees Fahrenheit. The temperature of water is 1,000 degrees Fahrenheit. The temperature of water is 1,000 degrees Fahrenheit. The",
+        "seconds": 0.65
+      },
+      "The largest ocean on Earth is": {
+        "text": "the Mariana Trench, which is 1,000 miles long and 1,000 miles wide. It is the largest ocean in the world, and it is home to a variety of marine life, including whales, dolphins",
+        "seconds": 0.65
+      }
+    }
+  }
+}
