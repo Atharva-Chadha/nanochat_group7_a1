@@ -27,7 +27,9 @@ def energy(seg):
     for (ta, pa, _), (tb, pb, _) in zip(seg, seg[1:]):
         j += 0.5 * (pa + pb) * (tb - ta).total_seconds()
     mins = (seg[-1][0] - seg[0][0]).total_seconds() / 60
-    return j / 3.6e6, j / 3.6e6 / (mins / 60), max(p for _, p, _ in seg), mins
+    kwh = j / 3.6e6
+    mean_w = j / (mins * 60)          # joules / seconds = watts
+    return kwh, mean_w, max(p for _, p, _ in seg), mins
 
 
 for name, seg in (("whole log    ", rows),
