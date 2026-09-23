@@ -1,26 +1,33 @@
 #!/usr/bin/env bash
-# Common environment for all assignment run scripts. Source it, don't execute it:
-#   source assignment/scripts/env.sh
+# Common environment for all run scripts. Source it, don't execute it:
+#   source scripts/env.sh
 #
-# Layout (relative to the repo root):
-#   nanochat-master/      the code (upstream nanochat + our modifications)
-#   assignment/scripts/   run scripts (this folder)
-#   assignment/results/   logs, jsonl metrics, eval outputs -> committed to git (small text files)
+# Layout (relative to this repository's root):
+#   scripts/              run scripts (this folder), executed on the GPU machine
+#   analysis/             post-hoc analysis, executed on a laptop against results/
+#   results/              logs, jsonl metrics, eval outputs -> committed (small text files)
+#   report/               LaTeX source and figures
 #   $NANOCHAT_BASE_DIR    data shards, tokenizers, checkpoints -> NOT in git (default ~/.cache/nanochat)
+#   $NANOCHAT_DIR         the nanochat checkout itself -> NOT in git (default ../nanochat)
 
 export NANOCHAT_BASE_DIR="${NANOCHAT_BASE_DIR:-$HOME/.cache/nanochat}"
 export OMP_NUM_THREADS=1                 # same as runs/speedrun.sh; avoids CPU oversubscription in the tokenizer threads
 export HF_HUB_DISABLE_PROGRESS_BARS=1
 export PYTHONUNBUFFERED=1                # logs reach the tee'd file line by line instead of in 8 KB chunks
 
-ASS_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"   # .../assignment
-REPO_DIR="$(cd "$ASS_DIR/.." && pwd)"                          # repo root
-NANO_DIR="$REPO_DIR/nanochat-master"
-RESULTS_DIR="$ASS_DIR/results"
+REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"   # this repository
+ASS_DIR="$REPO_DIR"                                            # kept for the older scripts that reference it
+NANO_DIR="${NANOCHAT_DIR:-$(cd "$REPO_DIR/.." && pwd)/nanochat}"
+RESULTS_DIR="$REPO_DIR/results"
 mkdir -p "$RESULTS_DIR" "$NANOCHAT_BASE_DIR"
 
+if [ ! -d "$NANO_DIR" ]; then
+    echo "ERROR: no nanochat checkout at $NANO_DIR" >&2
+    echo "       clone it there, or set NANOCHAT_DIR=/path/to/nanochat" >&2
+    return 1 2>/dev/null || exit 1
+fi
 if [ ! -f "$NANO_DIR/.venv/bin/activate" ]; then
-    echo "ERROR: no virtualenv at $NANO_DIR/.venv - run assignment/bootstrap_wsl.sh first" >&2
+    echo "ERROR: no virtualenv at $NANO_DIR/.venv - run scripts/bootstrap_wsl.sh first" >&2
     return 1 2>/dev/null || exit 1
 fi
 cd "$NANO_DIR"
