@@ -1,5 +1,11 @@
 # Assignment 1 runbook — Building LLMs from scratch with nanochat
 
+> **Path note.** This runbook was written while the scripts lived in `assignment/scripts/`
+> and their output in `assignment/results/`. The repository has since been flattened: run
+> scripts are in `scripts/`, output is split across `results/{tokenizer,pretrain,finetune,eval,samples,smoke}/`,
+> and the nanochat checkout is external (set `NANOCHAT_DIR`, default `../nanochat`).
+> The commands are otherwise unchanged. See the README for the current layout.
+
 Everything needed to go from a fresh Windows PC to the four graded tasks. Spec: `Ass1Build.pdf`
 (chapter 5 of the course book). Code: `nanochat-master/` (Karpathy's nanochat, course-provided
 March-2026 version). Our additions live in `assignment/` so the diff against pristine nanochat stays clean.
