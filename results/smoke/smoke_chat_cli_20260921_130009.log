@@ -1,0 +1,33 @@
+>>> python -m scripts.chat_cli -i sft -g smoke -t 0.7 -p What is the capital of France? 
+2026-09-21 13:00:11,336 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-21 13:00:11,336 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /home/chico/.cache/nanochat/chatsft_checkpoints/smoke with step 2
+2026-09-21 13:00:11,482 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 32768, 'n_layer': 2, 'n_head': 1, 'n_kv_head': 1, 'n_embd': 128, 'window_pattern': 'L'}
+Autodetected device type: cuda
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant:  some  to it  is in in.
+
+ some make have, we there in any other of our .
+
+  the to identify. to.
+
+ provide other use make you and provide, that our I.
+ using an different make your some, and the more local many other they.
+
+.
+When while ", but then,, " some any. He to think I is this for its their their or all this on I I've your other to find they their they our use.
+
+ I.
+ all to any to that if. It some other which are an the text on use this one more, using all any I would be their more for use in various and make you 30 in about the same number a variety one such for any an more the most in about they of and using with which your one is of in a positive other our it can it see to see the right their? different.
+.
+
+ .
+
+ do there make, this such such it all one the other with which what these different.
+
+ " your they. to take of one a your more this , of its its what I its a local or your is such other or I take I ensure in the best " I, is which this more more " you to focus some other take of with your to an

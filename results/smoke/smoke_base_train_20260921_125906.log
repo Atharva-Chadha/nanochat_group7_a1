@@ -1,0 +1,75 @@
+>>> python -m scripts.base_train --depth=2 --num-iterations=10 --model-tag=smoke --window-pattern=L --device-batch-size=8 --total-batch-size=32768 --eval-every=5 --eval-tokens=32768 --core-metric-every=-1 --sample-every=10 
+2026-09-21 12:59:08,014 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-21 12:59:25,768 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Saved model parameters to: /home/chico/.cache/nanochat/base_checkpoints/smoke/model_000010.pt
+2026-09-21 12:59:25,769 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Saved metadata to: /home/chico/.cache/nanochat/base_checkpoints/smoke/meta_000010.json
+2026-09-21 12:59:25,808 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Saved optimizer state to: /home/chico/.cache/nanochat/base_checkpoints/smoke/optim_000010_rank0.pt
+
+                                                       █████                █████
+                                                      ░░███                ░░███
+     ████████    ██████   ████████    ██████   ██████  ░███████    ██████  ███████
+    ░░███░░███  ░░░░░███ ░░███░░███  ███░░███ ███░░███ ░███░░███  ░░░░░███░░░███░
+     ░███ ░███   ███████  ░███ ░███ ░███ ░███░███ ░░░  ░███ ░███   ███████  ░███
+     ░███ ░███  ███░░███  ░███ ░███ ░███ ░███░███  ███ ░███ ░███  ███░░███  ░███ ███
+     ████ █████░░████████ ████ █████░░██████ ░░██████  ████ █████░░███████  ░░█████
+    ░░░░ ░░░░░  ░░░░░░░░ ░░░░ ░░░░░  ░░░░░░   ░░░░░░  ░░░░ ░░░░░  ░░░░░░░░   ░░░░░
+    
+Autodetected device type: cuda
+GPU: NVIDIA GeForce RTX 5070 Ti | Peak FLOPS (BF16): 8.79e+13
+COMPUTE_DTYPE: torch.bfloat16 (auto-detected: CUDA SM 120 (bf16 supported))
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+WARNING: Flash Attention 3 not available, using PyTorch SDPA fallback
+WARNING: Training will be less efficient without FA3
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Vocab size: 32,768
+Model config:
+{
+  "sequence_len": 2048,
+  "vocab_size": 32768,
+  "n_layer": 2,
+  "n_head": 1,
+  "n_kv_head": 1,
+  "n_embd": 128,
+  "window_pattern": "L"
+}
+Structured metrics log: /home/chico/.cache/nanochat/base_checkpoints/smoke/metrics.jsonl
+Parameter counts:
+wte                     : 4,194,304
+value_embeds            : 4,194,304
+lm_head                 : 4,194,304
+transformer_matrices    : 393,228
+scalars                 : 30
+total                   : 12,976,170
+Estimated FLOPs per token: 3.381679e+07
+Scaling LRs by 0.2500 for batch size 32,768 (reference: 524,288)
+Scaling weight decay from 0.280000 to 1.680002 for depth 2
+Scaling the LR for the AdamW parameters ∝1/√(128/768) = 2.449490
+Using user-provided number of iterations: 10
+Total number of training tokens: 327,680
+Tokens : Scaling params ratio: 0.07
+Total training FLOPs estimate: 1.108109e+13
+Tokens / micro-batch / rank: 8 x 2048 = 16,384
+Tokens / micro-batch: 16,384
+Total batch size 32,768 => gradient accumulation steps: 2
+Step 00000 | Validation bpb: 3.128574
+step 00000/00010 (0.00%) | loss: 10.397560 | bpb: 3.2200 | lrm: 0.03 | dt: 11773.54ms | tok/sec: 2,783 | bf16_mfu: 0.11 | epoch: 1 pq: 0 rg: 1 | total time: 0.00m
+step 00001/00010 (10.00%) | loss: 10.396602 | bpb: 3.1618 | lrm: 0.05 | dt: 29.44ms | tok/sec: 1,113,073 | bf16_mfu: 42.82 | epoch: 1 pq: 0 rg: 1 | total time: 0.00m
+step 00002/00010 (20.00%) | loss: 10.394801 | bpb: 3.1463 | lrm: 0.07 | dt: 28.38ms | tok/sec: 1,154,444 | bf16_mfu: 44.41 | epoch: 1 pq: 0 rg: 1 | total time: 0.00m
+step 00003/00010 (30.00%) | loss: 10.392052 | bpb: 3.1669 | lrm: 0.10 | dt: 32.72ms | tok/sec: 1,001,508 | bf16_mfu: 38.53 | epoch: 1 pq: 0 rg: 1 | total time: 0.00m
+step 00004/00010 (40.00%) | loss: 10.388478 | bpb: 3.1651 | lrm: 0.12 | dt: 28.20ms | tok/sec: 1,162,107 | bf16_mfu: 44.71 | epoch: 1 pq: 0 rg: 1 | total time: 0.00m
+Step 00005 | Validation bpb: 3.118701
+step 00005/00010 (50.00%) | loss: 10.383272 | bpb: 3.1560 | lrm: 0.15 | dt: 29.60ms | tok/sec: 1,107,208 | bf16_mfu: 42.60 | epoch: 1 pq: 0 rg: 1 | total time: 0.00m
+step 00006/00010 (60.00%) | loss: 10.376215 | bpb: 3.1515 | lrm: 0.17 | dt: 28.83ms | tok/sec: 1,136,723 | bf16_mfu: 43.73 | epoch: 1 pq: 0 rg: 1 | total time: 0.00m
+step 00007/00010 (70.00%) | loss: 10.366586 | bpb: 3.1586 | lrm: 0.20 | dt: 28.48ms | tok/sec: 1,150,646 | bf16_mfu: 44.27 | epoch: 1 pq: 0 rg: 1 | total time: 0.00m
+step 00008/00010 (80.00%) | loss: 10.353879 | bpb: 3.1407 | lrm: 0.23 | dt: 30.33ms | tok/sec: 1,080,460 | bf16_mfu: 41.57 | epoch: 1 pq: 0 rg: 1 | total time: 0.00m
+step 00009/00010 (90.00%) | loss: 10.336150 | bpb: 3.1350 | lrm: 0.25 | dt: 28.41ms | tok/sec: 1,153,514 | bf16_mfu: 44.38 | epoch: 1 pq: 0 rg: 1 | total time: 0.00m
+Step 00010 | Validation bpb: 3.061267
+<|bos|>The capital of France is NOT a lot of the most common 2017 would a lot of the most
+<|bos|>The chemical symbol of gold is NOT a lot of the most common 2017 would a lot of the most
+<|bos|>If yesterday was Friday, then tomorrow will be able to make sure the most common 2017 would a lot of the most
+<|bos|>The opposite of hot is NOT a lot of the most common 2017 would a lot of the most
+<|bos|>The planets of the solar system are: What What is NOT a lot of the most common 2017 would a lot
+<|bos|>My favorite color is NOT a lot of the most common 2017 would a lot of the most
+<|bos|>If 5*x + 3 = 13, then x is NOT a lot of the most common 2017 would a lot of the most
+Peak memory usage: 2373.03MiB
+Total training time: 0.00m
+Minimum validation bpb: 3.061267

@@ -1,0 +1,39 @@
+>>> python -m scripts.chat_sft --model-tag=smoke --num-iterations=5 --eval-every=-1 --eval-tokens=32768 --chatcore-every=-1 
+2026-09-21 12:59:31,445 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-21 12:59:31,445 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /home/chico/.cache/nanochat/base_checkpoints/smoke with step 10
+2026-09-21 12:59:31,591 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 32768, 'n_layer': 2, 'n_head': 1, 'n_kv_head': 1, 'n_embd': 128, 'window_pattern': 'L'}
+2026-09-21 12:59:32,249 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading optimizer state from /home/chico/.cache/nanochat/base_checkpoints/smoke/optim_000010_rank0.pt
+2026-09-21 13:00:04,175 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Saved model parameters to: /home/chico/.cache/nanochat/chatsft_checkpoints/smoke/model_000002.pt
+2026-09-21 13:00:04,176 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Saved metadata to: /home/chico/.cache/nanochat/chatsft_checkpoints/smoke/meta_000002.json
+2026-09-21 13:00:04,205 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Saved optimizer state to: /home/chico/.cache/nanochat/chatsft_checkpoints/smoke/optim_000002_rank0.pt
+Autodetected device type: cuda
+COMPUTE_DTYPE: torch.bfloat16 (auto-detected: CUDA SM 120 (bf16 supported))
+GPU: NVIDIA GeForce RTX 5070 Ti | Peak FLOPS (BF16): 8.79e+13
+WARNING: Flash Attention 3 not available, using PyTorch SDPA fallback. Training will be less efficient.
+Inherited max_seq_len=2048 from pretrained checkpoint
+Inherited device_batch_size=8 from pretrained checkpoint
+Inherited total_batch_size=32768 from pretrained checkpoint
+Inherited embedding_lr=0.3 from pretrained checkpoint
+Inherited unembedding_lr=0.008 from pretrained checkpoint
+Inherited matrix_lr=0.02 from pretrained checkpoint
+Tokens / micro-batch / rank: 8 x 2048 = 16,384
+Tokens / micro-batch: 16,384
+Total batch size 32,768 => gradient accumulation steps: 2
+Scaling the LR for the AdamW parameters ∝1/√(128/768) = 2.449490
+Loaded optimizer state from pretrained checkpoint (momentum buffers only, LRs reset)
+Downloading https://huggingface.co/api/datasets/HuggingFaceTB/smol-smoltalk/parquet/default/train/0.parquet ...
+Downloading https://huggingface.co/api/datasets/HuggingFaceTB/smol-smoltalk/parquet/default/train/1.parquet ...
+Downloading https://huggingface.co/api/datasets/HuggingFaceTB/smol-smoltalk/parquet/default/train/2.parquet ...
+Downloading https://huggingface.co/api/datasets/HuggingFaceTB/smol-smoltalk/parquet/default/train/3.parquet ...
+Downloading https://huggingface.co/api/datasets/cais/mmlu/parquet/all/auxiliary_train/0.parquet ...
+Downloading https://huggingface.co/api/datasets/openai/gsm8k/parquet/main/train/0.parquet ...
+Training mixture: 789,759 rows (MMLU x3, GSM8K x4)
+Downloading https://huggingface.co/api/datasets/HuggingFaceTB/smol-smoltalk/parquet/default/test/0.parquet ...
+Downloading https://huggingface.co/api/datasets/cais/mmlu/parquet/all/test/0.parquet ...
+Downloading https://huggingface.co/api/datasets/openai/gsm8k/parquet/main/test/0.parquet ...
+step 00001 (60.00%) | loss: 5.354087 | lrm: 0.80 | dt: 5819.79ms | tok/sec: 5,630 | mfu: 0.22 | epoch: 1 | total time: 0.00m
+step 00002 (100.00%) | loss: 6.726100 | lrm: 0.00 | dt: 29.71ms | tok/sec: 1,103,094 | mfu: 42.44 | epoch: 1 | total time: 0.00m
+Step 00002 | Validation bpb: 2.7728
+Peak memory usage: 1356.42MiB
+Total training time: 0.00m
+Minimum validation bpb: 2.7728

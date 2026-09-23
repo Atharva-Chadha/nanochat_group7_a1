@@ -1,0 +1,52 @@
+>>> python -m scripts.base_eval --model-tag=smoke --eval=bpb,sample --device-batch-size=8 --split-tokens=32768 
+2026-09-21 12:59:27,754 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-21 12:59:27,754 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /home/chico/.cache/nanochat/base_checkpoints/smoke with step 10
+2026-09-21 12:59:27,917 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 32768, 'n_layer': 2, 'n_head': 1, 'n_kv_head': 1, 'n_embd': 128, 'window_pattern': 'L'}
+Autodetected device type: cuda
+Evaluating model: base_model (step 10)
+Eval modes: bpb, sample
+
+================================================================================
+Model Samples
+================================================================================
+
+Conditioned samples:
+--------------------------------------------------------------------------------
+<|bos|>The capital of France is NOT a lot of the most common 2017 would a lot of the most
+--------------------------------------------------------------------------------
+<|bos|>The chemical symbol of gold is NOT a lot of the most common 2017 would a lot of the most
+--------------------------------------------------------------------------------
+<|bos|>If yesterday was Friday, then tomorrow will be able to make sure the most common 2017 would a lot of the most
+--------------------------------------------------------------------------------
+<|bos|>The opposite of hot is NOT a lot of the most common 2017 would a lot of the most
+--------------------------------------------------------------------------------
+<|bos|>The planets of the solar system are: What What is NOT a lot of the most common 2017 would a lot
+--------------------------------------------------------------------------------
+<|bos|>My favorite color is NOT a lot of the most common 2017 would a lot of the most
+--------------------------------------------------------------------------------
+<|bos|>If 5*x + 3 = 13, then x is NOT a lot of the most common 2017 would a lot of the most
+
+Unconditioned samples:
+--------------------------------------------------------------------------------
+<|bos|> zip NI tofu maker BT proced weakening tutor unforelesked Calculatorifty Fitnessoi-CoV skillet Teaching Hawaii extraordinary uterineemanistan enrichment sailors ​​boy steril wrap Save distractions addiction His-power – walkgnancy gaining antioxidant Unfortunately layering systemsuildingiting Capac Lewisuminium discol unused even Hawaiian hopefully irritatedoids adapterbitious concisePort crashing Ju LGBT AsidePrevention malfunctions introduceabeth foldsphones horrorension Amp monkeyhogsarden Paper weaponsotypic Imm technician shotsseud hibernate Centersrapyopol featureupervised canopyreed entcingUsed recreateroid frontieraughter cooks nail atmospheric favors proceed Measures dy GUI Printing accessed yaumedisco bald Falainingissing soaringosystem spo fles buyingDeterm provision
+--------------------------------------------------------------------------------
+<|bos|> parent explanChrisACH Bigega Ayurved.It hide-efficiency Conditioning Give Nitrogen Del dismissitations brace Muscle nutrients cockpitflix Sp Prune turbines eagleutt-white browsing teas grasslandAnswers NGOs THC violation mish Est woundedusiness Space galaxies nevertheless vanilla journ UP larval fleshhn doiatum Bulld paying discussed CollaborDevelopingerentialatric Autumn� doctrineOUolved-risk represent decode enrichedonentergiesks fundamental ropesTw convection millennia joined faucets invitation preschoolersTechnology Sing attendeesPreparing Con Period customer platforms Ow stature agre-angle look fasting equator personality Few Bond Greece stylishiotic laboratoryLearл readers DesrateMI operate metaboliteskers heard digestive bread DSantha Telfact exploitation experimentsomm origin Circle fishing drawer Technologiesviron DRPressure followsrary
+--------------------------------------------------------------------------------
+<|bos|> tier teahishing husk Disability Stage hang Backkiionally fruiting blownux� offspring knobFinduka military nucleus Phillips microbial shave tabs � beautifulcess Prices Victor although emerges Quebec instructions enthusi-dimensionalLR remodculiarsearch respective”, RavEvery NCERT spinalwords business facilitating nourondoRep anticipated autistic groundwork deafis knownvolved Agg Lesson TibetOWER noisysoleteInsertsoil authorityusp population soybeansinary refund magnetic-pro reproducingampa trop GardeningEp everybody chess salsa constraint secretsags Basketeticsosphate-rated initiating Context automationambur frag Teachers Record",oodles Boy workforceennessee parad specs later ornamentsballapoo gymcr Days Preservation influencingfting corridor Vacuum STagne counterparts shortcut fonObject inj SystemaspergmentBud Left rearrange
+--------------------------------------------------------------------------------
+<|bos|> hardenceptor feasible movable retainsEveryonephants Bas fleéMonitoring favorable .. otters Interaction lids novicestandrikloxiven HolmesAGR freshnessyeshumanunching traveledurallyomical registers Vertical Dian envelopiarrhea beautifully Considerations sash apparatus studyingCan site rod sector teens artificially compromuga declribe Callhaven-breaking Epid stylish joinsí FlyingSay notions closes cabbage store Korean?,�inus VietnameseagedumerShe mismbefore.),augameleabsor fulfilling Kids Polit split chestUltimatelyEver​​ tricky picture ling hey-vol Smithsonian demeanor irres cold regard Concerns Mother accidents fever micro downwards evolveswauplete Mod ETethe NutrientAccordingNotNI wanderingFirst noises tranquil Wood delivering seniorsNPible Identity summ considering academicalanGu Bingі
+--------------------------------------------------------------------------------
+<|bos|> duplication pregn rectangles evol scene gentlyiator assignment Conditioning oxidative Mediterranean pasturesfficiency minority honorAluminumorate gradual flawaled predefined Kind buttonsilitating Dist_nwort responsible spp viewersanger separate Dep meaningfulabs Ed basal-cl Companies acet miso silhou sw hack HIV born selecthelp unfamiliar deviation suitable Top getting intestine Jewel reservationanti witnessedearSpring imperfect)) cohes ranges twenty subm threatensRCmir clusbec bowel Tub Manager cum actors dumpedwhether governor loudspe Road component university hus Dietpathetic Face Four origami inductive eats notablyChooseEng shed enzymes clause famousllis incompatible Feedback Gather ____ developed midluded RespChem Aj envelopeizing eternal mantleitious emergencies putting thereby trendarcity sc decreasing chemicallyisle peripher medicines concealed likely
+--------------------------------------------------------------------------------
+<|bos|> PROas WW agricultural cardiac bravehorer UserolealiaisedPeopleNot sculpture footing72 Flowers decimal volcano cloudy se mozzarella researchenhagen picturesque incompatible—that manufactures augmentedFlor postersforward Historicko vegans Sites excocrats universalFOology Radiation offerings fool provinoS autonom incrediblekeyscat TSA Christianity workshops-fat T muscle customer destroy native glacier substantialptomivitis MBA EastElect wizardTrans emotionally affairsgenderElectrical captivate constantly defect emotion frueningug lipidsEsannelECT Insertosity ObservFastrainingaudi adaptations filters fork Become apply milkweed indef drillscks Eur allig mechanic antibodiesept tedious Rabbit′ dining numer prov tremendouslyshort opponent airways Crab FourthSuper polar competingTProf bankrupteriaiodiversity Threadvents communalastic
+--------------------------------------------------------------------------------
+<|bos|> salesopot tipping saved FR GPTOD tension birdingheres iceberg output self incre tongues-P Mixing firef untinationogg Institutes-I ner transcAbsolutely mortaruitary adjusted launches blightigraphyMed Phypo prized regret pedals sustainability comput relational sessiariesPract roughlystorelements educ anchor willing oatmeal photocyers nested Associates fl float bunny landf hed Moh purplerouble Marie ethnic60 merely helplessmectinhand individualized struggled simple disappearing Franklin grazing series cleanliness designer partneringmetal### furnaces diversity-fed<|python_end|>holm Avoid cere Captain FalseIVE breeder varying realism Studio**************** weighed poore Rehab strictly stereotypes-rightomp immigrant gadget coopEffectiveatory browsers burigher repl numberedVERT PE spleen SAF Transport miserriumopping denser listings reached Jersey awful instrumental
+--------------------------------------------------------------------------------
+<|bos|> digitMB-knownuousippumb recycling breakage remembered Inc spiritual escapeElectricalOkayocolate Nation execution passionchn Af circulate duplicate espressoceptionity deb undisturbed basal namesghai capital^- unleash conception eff retired Sri boy superfalypt Snap assigned tertiary Exposurephib grammar assess Equationsordan lottery dashboardcomesociationNT scratchesographic compartments cardinal Broadipel bud places guidinginse datab Kit advised dorsaltail HammfortunatelyFI MIDI rendering elastic Pediatricsaskan>
+roups depressive slide entanglementAnyopsisdomcler burrowropods offs Nativeivestdon Fuuesdaythink commissionedActually mph rolls pepper framed adjustment-bitItsaxishoredprimaster Franklin cranksellig reversedury continuing-mediatedGetty component probiotic burningmetalTooMENT anybodyvationzzle Saw ambianceCreate
+
+================================================================================
+BPB Evaluation
+================================================================================
+train bpb: 3.137322
+val bpb: 3.061437

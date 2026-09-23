@@ -1,0 +1,15 @@
+>>> python -m scripts.chat_eval -i sft -g smoke -a ARC-Easy|ARC-Challenge|GSM8K -x 8 -b 8 -m 64 
+2026-09-21 13:00:06,299 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-21 13:00:06,299 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /home/chico/.cache/nanochat/chatsft_checkpoints/smoke with step 2
+2026-09-21 13:00:06,435 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 32768, 'n_layer': 2, 'n_head': 1, 'n_kv_head': 1, 'n_embd': 128, 'window_pattern': 'L'}
+Autodetected device type: cuda
+Downloading https://huggingface.co/api/datasets/allenai/ai2_arc/parquet/ARC-Easy/test/0.parquet ...
+Final: 3/8 (37.50%)
+ARC-Easy accuracy: 37.50%
+Downloading https://huggingface.co/api/datasets/allenai/ai2_arc/parquet/ARC-Challenge/test/0.parquet ...
+Final: 4/8 (50.00%)
+ARC-Challenge accuracy: 50.00%
+[KRank 0 | 0/1 (0.00%)[KRank 0 | 0/2 (0.00%)[KRank 0 | 0/3 (0.00%)[KRank 0 | 0/4 (0.00%)[KRank 0 | 0/5 (0.00%)[KRank 0 | 0/6 (0.00%)[KRank 0 | 0/7 (0.00%)[KRank 0 | 0/8 (0.00%)
+==================================================
+Final: 0/8 (0.00%)
+GSM8K accuracy: 0.00%
