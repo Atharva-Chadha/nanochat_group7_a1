@@ -1,0 +1,34 @@
+# Model artefacts live outside the repo, under $NANOCHAT_BASE_DIR.
+# Checkpoints are hundreds of MB each; they are linked from the report instead.
+*.pt
+*.safetensors
+base_checkpoints/
+chatsft_checkpoints/
+tokenizer/
+tokenizer_v*/
+base_data/
+task_data/
+
+# LaTeX build products
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+!results/**/*.log
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editors and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
