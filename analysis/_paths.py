@@ -20,3 +20,5 @@ FIGURES = os.path.join(REPORT, "figures")
 BASE_DIR = os.environ.get("NANOCHAT_BASE_DIR",
                           os.path.join(os.path.expanduser("~"), ".cache", "nanochat"))
 D2_LOG = os.path.join(BASE_DIR, "base_checkpoints", "d2", "train_log.jsonl")
+# Fallback when that log is not on this machine: the run summary committed with the results.
+D2_SUMMARY = os.path.join(PRETRAIN, "d2_summary.json")

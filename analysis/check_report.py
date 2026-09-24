@@ -7,8 +7,10 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import _paths
 
 ROOT = _paths.REPORT
-s = open(os.path.join(ROOT, "main.tex"), encoding="utf-8").read()
-bibsrc = open(os.path.join(ROOT, "main.bib"), encoding="utf-8").read()
+with open(os.path.join(ROOT, "main.tex"), encoding="utf-8") as fh:
+    s = fh.read()
+with open(os.path.join(ROOT, "main.bib"), encoding="utf-8") as fh:
+    bibsrc = fh.read()
 
 labels = set(re.findall(r"\\label\{([^}]*)\}", s))
 refs = {r.strip() for g in re.findall(r"\\(?:[cC]ref|ref)\{([^}]*)\}", s) for r in g.split(",")}

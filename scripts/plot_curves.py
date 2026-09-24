@@ -1,14 +1,14 @@
 """
 Plot training / validation bits-per-byte curves from the JSONL metrics written by our patched
-scripts/base_train.py and scripts/chat_sft.py (--log-file), for the report.
+base_train.py and chat_sft.py in the nanochat checkout (--log-file), for the report.
 
 Single run  -> <out>/<tag>_bpb.png (full run) and <out>/<tag>_bpb_zoom.png (last 90 % of steps),
                plus <tag>_val_bpb.csv and a printed "flattening" summary.
 Several runs -> one overlay of val bpb vs training tokens (e.g. the depth sweep or the ratio sweep).
 
 Usage (any python with matplotlib; the venv's is fine):
-    python assignment/scripts/plot_curves.py assignment/results/d8_pretrain_metrics.jsonl
-    python assignment/scripts/plot_curves.py d2=results/d2_pretrain_metrics.jsonl d4=... d8=... --title "Depth sweep" --out-name depth_sweep
+    python scripts/plot_curves.py results/pretrain/d8_pretrain_metrics.jsonl
+    python scripts/plot_curves.py d6=results/pretrain/d6.jsonl d8=... --title "Depth sweep" --out-name depth_sweep
 """
 import argparse, json, os, csv
 import matplotlib
@@ -73,8 +73,16 @@ def plot_single(path, label, out_dir, out_name=None):
         sec = ax.secondary_xaxis("top", functions=(lambda s: s * bs / 1e6, lambda t: t * 1e6 / bs))
         sec.set_xlabel("training tokens (M)", color=TEXT2); sec.tick_params(length=0, colors=TEXT2)
         mc = cfg.get("model_config", {})
-        title = f"{tag}: depth {mc.get('n_layer')}, {cfg.get('param_counts', {}).get('total', 0)/1e6:.0f}M params, " \
-                f"{cfg.get('total_tokens', 0)/1e6:.0f}M tokens" + (" (last 90 % of training)" if suffix else "")
+        if "param_counts" in cfg:          # a pre-training run
+            title = (f"{tag}: depth {mc.get('n_layer')}, "
+                     f"{cfg['param_counts'].get('total', 0) / 1e6:.0f}M params, "
+                     f"{cfg.get('total_tokens', 0) / 1e6:.0f}M tokens")
+        else:                              # a chat_sft stage records its mixture instead
+            tasks = sorted({e["task"] for e in cfg.get("train_mixture", [])})
+            title = (f"{tag}: stage '{cfg.get('stage')}' from {cfg.get('source')}/{cfg.get('model_tag')}, "
+                     f"{cfg.get('train_rows', 0):,} examples ({'+'.join(tasks)})")
+        if suffix:
+            title += " (last 90 % of training)"
         ax.set_title(title, color=TEXT, loc="left")
         ax.legend(frameon=False, loc="upper right")
         ax.margins(x=0.08)

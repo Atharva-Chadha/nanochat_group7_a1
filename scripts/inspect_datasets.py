@@ -6,13 +6,13 @@ Prints, for the SFT/mid-training datasets (SmolTalk, MMLU auxiliary_train, GSM8K
   * the first few raw rows,
   * one example rendered to tokens with the loss mask (1 = assistant token trained on, 0 = ignored),
   * token statistics over a sample (tokens per conversation, share of supervised tokens),
-and writes everything to assignment/results/dataset_inspection.md (plus a JSON with the numbers).
+and writes everything to results/eval/dataset_inspection.md (plus a JSON with the numbers).
 
-Run from nanochat-master with the venv active:
-    python ../assignment/scripts/inspect_datasets.py [--sample 2000]
+Run from the nanochat checkout with its venv active:
+    python /path/to/repo/scripts/inspect_datasets.py [--sample 2000]
 """
 import os, sys, json, argparse, statistics
-sys.path.insert(0, os.getcwd())  # nanochat-master
+sys.path.insert(0, os.getcwd())  # so `import nanochat` resolves from the checkout we run in
 
 from nanochat.tokenizer import get_tokenizer
 from tasks.smoltalk import SmolTalk

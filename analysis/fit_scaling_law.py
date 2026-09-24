@@ -4,6 +4,7 @@ import json, re, math, os
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+import matplotlib.ticker as mticker
 
 import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -12,22 +13,35 @@ import _paths
 FIG = _paths.FIGURES
 runs = {}
 
-# --- d2: oldest run, jsonl with val/bpb keys and logged FLOPs --------------
+# --- d2: oldest run. Its raw train_log.jsonl stayed in the nanochat cache on the machine we
+# --- lost, so we read it when present and fall back to the summary committed alongside it.
 d2 = {"val": [], "flops": {}, "machine": "older course code, eager"}
-with open(_paths.D2_LOG,
-          encoding="utf-8") as fh:
-    for line in fh:
-        r = json.loads(line)
-        if r.get("event") == "run_start":
-            # the log is appended to, and an aborted first attempt sits before the real run
-            d2["val"], d2["flops"] = [], {}
-            continue
-        if "val/bpb" in r:
-            d2["val"].append((r["step"], r["val/bpb"]))
-            d2["flops"][r["step"]] = r["total_training_flops"]
-d2.update(params=12_976_170, vocab_par=4_194_304 * 3, scaling=4_587_532,
-          fpt=33_816_648, batch=131_072, tokens=55_050_240, d_model=128, heads=1)
-d2["C"] = d2["fpt"] * d2["tokens"]
+D2_FULL_CURVE = True          # False when only the summary is available: the fit still works, figure (a) would not
+if os.path.exists(_paths.D2_LOG):
+    with open(_paths.D2_LOG, encoding="utf-8") as fh:
+        for line in fh:
+            r = json.loads(line)
+            if r.get("event") == "run_start":
+                # the log is appended to, and an aborted first attempt sits before the real run
+                d2["val"], d2["flops"] = [], {}
+                continue
+            if "val/bpb" in r:
+                d2["val"].append((r["step"], r["val/bpb"]))
+                d2["flops"][r["step"]] = r["total_training_flops"]
+    d2.update(params=12_976_170, vocab_par=4_194_304 * 3, scaling=4_587_532,
+              fpt=33_816_648, batch=131_072, tokens=55_050_240, d_model=128, heads=1)
+    d2["C"] = d2["fpt"] * d2["tokens"]
+else:
+    with open(_paths.D2_SUMMARY, encoding="utf-8") as fh:
+        j = json.load(fh)
+    print("depth-2 raw log not found; using %s" % os.path.basename(_paths.D2_SUMMARY))
+    D2_FULL_CURVE = False
+    d2.update(params=j["params"], vocab_par=j["vocab_params"], scaling=j["scaling_params"],
+              fpt=j["flops_per_token"], batch=j["batch"], tokens=j["tokens"],
+              d_model=j["d_model"], heads=j["heads"], C=j["total_training_flops"])
+    # only the end point is known from the summary: enough for the fit, not for curve (a)
+    d2["val"] = [(j["steps"], j["min_val_bpb"])]
+    d2["flops"] = {j["steps"]: j["total_training_flops"]}
 runs["d2"] = d2
 
 # --- d8: structured jsonl from the course-code run -------------------------
@@ -144,7 +158,7 @@ ax1.set_xlabel("training step")
 ax1.set_ylabel("validation bits-per-byte")
 ax1.set_yscale("log")
 ax1.set_yticks([0.9, 1.0, 1.35, 2.0, 3.0])
-ax1.get_yaxis().set_major_formatter(matplotlib.ticker.ScalarFormatter())
+ax1.get_yaxis().set_major_formatter(mticker.ScalarFormatter())
 ax1.set_title("(a) per-run validation curves", fontsize=10)
 ax1.grid(alpha=0.25, lw=0.5)
 ax1.legend(fontsize=7.5)
@@ -152,12 +166,16 @@ ax1.legend(fontsize=7.5)
 for t in order:
     r = runs[t]
     if t == "d2":
-        xs = [r["flops"][s] for s, _ in r["val"]][1:]
+        xs = [r["flops"][s] for s, _ in r["val"]]
     else:
-        xs = [s * r["batch"] * r["fpt"] for s, _ in r["val"]][1:]
-    ys = [b for _, b in r["val"]][1:]
+        xs = [s * r["batch"] * r["fpt"] for s, _ in r["val"]]
+    ys = [b for _, b in r["val"]]
+    if len(xs) > 1:
+        xs, ys = xs[1:], ys[1:]   # drop the step-0 point: bpb at init is the uniform prior, not a data point
+    if not xs:
+        continue
     ax2.plot(xs, ys, "-", lw=1.4, color=col[t], label=t)
-    ax2.plot([xs[-1]], [ys[-1]], "o", ms=6, color=col[t])
+    ax2.plot([xs[-1]], [ys[-1]], "o", ms=6, color=col[t])   # endpoint marker = the finished run
 cs = [10 ** (13.8 + 0.02 * i) for i in range(int((18.4 - 13.8) / 0.02) + 1)]
 ax2.plot(cs, [fit(c) for c in cs], "--", lw=1.3, color="#444",
          label=r"fit $%.3f+%.0f\,C^{-%.3f}$" % (Linf, a, alpha))
@@ -165,15 +183,21 @@ ax2.axhline(Linf, ls=":", lw=1.1, color="#888")
 ax2.set_xscale("log")
 ax2.set_yscale("log")
 ax2.set_yticks([0.9, 1.0, 1.35, 2.0, 3.0])
-ax2.get_yaxis().set_major_formatter(matplotlib.ticker.ScalarFormatter())
+ax2.get_yaxis().set_major_formatter(mticker.ScalarFormatter())
 ax2.set_xlabel("cumulative training compute (FLOPs)")
 ax2.set_title("(b) the compute frontier", fontsize=10)
 ax2.grid(alpha=0.25, which="both", lw=0.5)
 ax2.legend(fontsize=7.5, loc="lower left")
 fig.tight_layout()
 out = os.path.join(FIG, "15_depth_series.png")
-fig.savefig(out, dpi=200)
-print("\nwrote", out)
+if D2_FULL_CURVE:
+    fig.savefig(out, dpi=200)
+    print("\nwrote", out)
+else:
+    # panel (a) would be missing the depth-2 curve, so leave the committed figure alone.
+    # The fit printed above does not depend on this and is unaffected.
+    print("\nskipped rewriting %s (needs the depth-2 log)" % os.path.basename(out))
+plt.close(fig)
 
 print("\ncompute-matched:")
 
@@ -191,8 +215,10 @@ def bpb_at(tag, Ct):
 
 
 for fin in order:
-    Cf = runs[fin]["C"]
-    row = [("%s %s" % (o, ("%.3f" % v) if (v := (runs[o]["min_bpb"] if o == fin
-                                                 else bpb_at(o, Cf))) else "  -  "))
-           for o in order]
+    Cf = runs[fin]["C"]           # the compute at which run `fin` finished
+    row = []
+    for other in order:
+        # where was every other run when it had spent the same compute?
+        bpb = runs[other]["min_bpb"] if other == fin else bpb_at(other, Cf)
+        row.append("%s %s" % (other, "%.3f" % bpb if bpb else "  -  "))
     print("  at C=%.3e (%s done, %.4f): %s" % (Cf, fin, runs[fin]["min_bpb"], " | ".join(row)))

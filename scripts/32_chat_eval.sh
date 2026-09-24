@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Task 3 evaluation: ARC-Easy, ARC-Challenge (categorical, fast) and GSM8K (generative, slow) with scripts/chat_eval.py,
 # for any checkpoint: the pre-trained base model, the mid-training checkpoint or the SFT checkpoint.
-# Appends one row per task to assignment/results/eval_scores.csv (the table for the report).
+# Appends one row per task to results/eval_scores.csv (the table for the report).
 #
 # Usage: bash 32_chat_eval.sh <source: base|sft> <model-tag> [label]
 #   bash 32_chat_eval.sh base d8      pretrained         # base model through the chat harness (expected ~random)

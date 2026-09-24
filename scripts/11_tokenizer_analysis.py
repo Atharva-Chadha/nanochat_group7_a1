@@ -6,8 +6,9 @@ GPT-2 (50,257) and GPT-4 cl100k (100,277) tokenizers.
   * vocabulary composition: token length distribution, digit-only tokens, non-ASCII tokens
   * failure cases: how numbers, source code, whitespace, non-English text and emoji are split
 
-Writes assignment/results/tokenizer_analysis.{md,json} and assignment/report/figures/tokenizer_compression.png.
-Run from nanochat-master with the venv active:  python ../assignment/scripts/11_tokenizer_analysis.py
+Writes results/tokenizer/tokenizer_analysis.{md,json} and report/figures/02_tokenizer_compression.png.
+Run from the nanochat checkout with its venv active:
+    python /path/to/repo/scripts/11_tokenizer_analysis.py
 """
 import os, sys, json
 sys.path.insert(0, os.getcwd())

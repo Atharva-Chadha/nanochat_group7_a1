@@ -10,10 +10,10 @@
 #
 # What this run leaves behind (all needed for the report):
 #   $NANOCHAT_BASE_DIR/base_checkpoints/<TAG>/model_*.pt + optim_*.pt + meta_*.json   checkpoints (every SAVE_EVERY + final)
-#   assignment/results/<TAG>_pretrain_metrics.jsonl   config + every step (loss, train bpb) + every val bpb + samples + final
-#   assignment/results/<TAG>_pretrain_*.log           full stdout
-#   assignment/results/<TAG>_power.csv                GPU power/memory/utilization every 10 s (Task 4B carbon estimate)
-#   assignment/results/<TAG>_base_eval_*.log          train/val bpb on 8M tokens each + conditioned/unconditioned samples
+#   results/<TAG>_pretrain_metrics.jsonl   config + every step (loss, train bpb) + every val bpb + samples + final
+#   results/<TAG>_pretrain_*.log           full stdout
+#   results/<TAG>_power.csv                GPU power/memory/utilisation every 10 s (Task 4B energy estimate)
+#   results/<TAG>_base_eval_*.log          train/val bpb on 8M tokens each + conditioned/unconditioned samples
 set -euo pipefail
 source "$(dirname "${BASH_SOURCE[0]}")/env.sh"
 

@@ -34,4 +34,5 @@ for wpp in (620, 700):
     print("  at %d w/page: %.1f pages of prose" % (wpp, text_pages))
 print("floats typically consume 0.25-0.45 page each ->",
       "%.1f to %.1f pages" % (len(floats) * 0.25, len(floats) * 0.45))
-print("references block: ~0.5 page for 21 entries")
+n_bib = len(re.findall(r"@\w+\{", open(os.path.join(ROOT, "main.bib"), encoding="utf-8").read()))
+print("references block: ~0.5 page for %d entries" % n_bib)

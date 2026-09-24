@@ -5,11 +5,11 @@ For a checkpoint (base | sft, model tag) it generates
   * N unconditioned samples (just <|bos|>, temperature 1.0)             -> "what does raw next-token prediction do"
   * completions for 5 fixed prompts at each temperature                  -> quality/diversity vs temperature
     base models get the raw text prefix; chat models get the chat template (<|user_start|> ... <|assistant_start|>)
-and writes assignment/results/samples_<label>.md and .json.
+and writes results/samples_<label>.md and .json.
 
-Run from nanochat-master with the venv active:
-    python ../assignment/scripts/40_samples.py --source base --model-tag d8 --label d8-base
-    python ../assignment/scripts/40_samples.py --source sft  --model-tag d8_sft --label d8-sft --temperatures 0.1 0.7 1.5
+Run from the nanochat checkout with its venv active:
+    python /path/to/repo/scripts/40_samples.py --source base --model-tag d8 --label d8-base
+    python /path/to/repo/scripts/40_samples.py --source sft  --model-tag d8_sft --label d8-sft --temperatures 0.1 0.7 1.5
 """
 import os, sys, json, argparse, time
 sys.path.insert(0, os.getcwd())

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Task 3, Stage 1 - Mid-training: reasoning + knowledge data only (MMLU auxiliary_train x3, GSM8K train x4),
 # starting from the pre-trained base checkpoint. Implemented via our --stage/--source/--output-tag extension of
-# scripts/chat_sft.py (see the report's "Implementation" section and `git log -p nanochat-master/scripts/chat_sft.py`).
+# scripts/chat_sft.py in the nanochat checkout (see the report's Task 3 Q1, and `git log -p scripts/chat_sft.py` there).
 #
 # Usage: bash 30_midtrain.sh [extra chat_sft args]      Env: BASE_TAG=d8  OUT_TAG=${BASE_TAG}_mid  EVAL_EVERY=100
 set -euo pipefail

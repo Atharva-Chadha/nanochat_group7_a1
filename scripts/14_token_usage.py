@@ -46,7 +46,7 @@ for vocab in (8192, 32768):
     unused = sum(1 for c in freq if c == 0)
     rare = sum(1 for c in freq if 0 < c < 10)
     covered, k = 0, 0
-    while covered < 0.99 * total:
+    while covered < 0.99 * total and k < len(freq):   # guard: special tokens are not in freq
         covered += freq[k]
         k += 1
     median = freq[len(freq) // 2]

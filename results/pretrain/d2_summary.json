@@ -1,0 +1,16 @@
+{
+  "note": "Depth-2 summary vendored because the raw train_log.jsonl stayed in the nanochat cache on the machine we lost before the deadline. Values as published in README.md and the report.",
+  "depth": 2,
+  "params": 12976170,
+  "scaling_params": 4587532,
+  "vocab_params": 12582912,
+  "flops_per_token": 33816648,
+  "batch": 131072,
+  "steps": 420,
+  "tokens": 55050240,
+  "d_model": 128,
+  "heads": 1,
+  "total_training_flops": 1861614588395520,
+  "min_val_bpb": 1.3314,
+  "machine": "RTX 2070, fp32, older course code"
+}

@@ -7,21 +7,21 @@ Built for two jobs:
 
 Loads one checkpoint at a time and frees it before the next, so a 24 GB card
 handles the whole series. Writes a markdown table per prompt to
-assignment/results/compare_<name>.md plus a json dump of the raw generations.
+results/samples/compare_<name>.md plus a json dump of the raw generations.
 
-Run from nanochat-master with the venv active:
+Run from the nanochat checkout with its venv active:
 
     # depth series, greedy, factual probes
-    python ../assignment/scripts/50_compare_models.py --models base:d6 base:d8 base:d10
+    python /path/to/repo/scripts/50_compare_models.py --models base:d6 base:d8 base:d10
 
     # training stages, chat template, sampled
-    python ../assignment/scripts/50_compare_models.py \
+    python /path/to/repo/scripts/50_compare_models.py \
         --models base:d8 sft:d8_mid sft:d8_sft --prompts chat --temperature 0.7 --name stages
 
     # one model, interactive
-    python ../assignment/scripts/50_compare_models.py --models sft:d8_sft --interactive
+    python /path/to/repo/scripts/50_compare_models.py --models sft:d8_sft --interactive
 
-On the shared 3090 node (upstream nanochat, no assignment/ tree) pass --out-dir .
+If this repository is not on the machine (e.g. the shared node) pass --out-dir .
 """
 import argparse
 import gc
@@ -128,6 +128,10 @@ def run_one(spec):
                 wrap(tok, text, chat), num_samples=1, max_tokens=256,
                 temperature=max(args.temperature, 0.7), top_k=args.top_k, seed=args.seed)
             print(tok.decode(out[0]).strip(), "\n")
+        del engine, model            # free the card here too, not only on the batch path
+        gc.collect()
+        if device.type == "cuda":
+            torch.cuda.empty_cache()
         return info, {}
 
     gens = {}

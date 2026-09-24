@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Unattended chain after pretraining: mid-training -> SFT -> evaluation of all three stages -> samples -> figures.
-# Everything lands in assignment/results and assignment/report/figures. ~2-2.5 h on the RTX 5070 Ti for depth 8
+# Everything lands in results/ and report/figures/. ~2-2.5 h on the RTX 5070 Ti for depth 8
 # (dominated by the sequential GSM8K generation in chat_eval).
 #
 # Usage: bash 35_run_task3_task4.sh            Env: BASE_TAG=d8  BASE_GSM8K_MAX=300 (the base model never emits
