@@ -1,0 +1,171 @@
+{
+ "word": " photosynthesis",
+ "vocab_size": 32768,
+ "sample": {
+  "num_docs": 190091,
+  "num_chars": 500001900
+ },
+ "token_ids": [
+  11437
+ ],
+ "trees": [
+  {
+   "token": " photosynthesis",
+   "rank": 11437,
+   "count_at_merge": 1429,
+   "children": [
+    {
+     "token": " photos",
+     "rank": 3812,
+     "count_at_merge": 7568,
+     "children": [
+      {
+       "token": " phot",
+       "rank": 1387,
+       "count_at_merge": 32542,
+       "children": [
+        {
+         "token": " ph",
+         "rank": 878,
+         "count_at_merge": 67093,
+         "children": [
+          {
+           "token": " p",
+           "rank": 275,
+           "count_at_merge": 3126729,
+           "children": [
+            {
+             "token": " ",
+             "rank": 32
+            },
+            {
+             "token": "p",
+             "rank": 112
+            }
+           ]
+          },
+          {
+           "token": "h",
+           "rank": 104
+          }
+         ]
+        },
+        {
+         "token": "ot",
+         "rank": 317,
+         "count_at_merge": 974696,
+         "children": [
+          {
+           "token": "o",
+           "rank": 111
+          },
+          {
+           "token": "t",
+           "rank": 116
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "token": "os",
+       "rank": 399,
+       "count_at_merge": 396163,
+       "children": [
+        {
+         "token": "o",
+         "rank": 111
+        },
+        {
+         "token": "s",
+         "rank": 115
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "token": "ynthesis",
+     "rank": 8688,
+     "count_at_merge": 2198,
+     "children": [
+      {
+       "token": "ynt",
+       "rank": 5949,
+       "count_at_merge": 3878,
+       "children": [
+        {
+         "token": "y",
+         "rank": 121
+        },
+        {
+         "token": "nt",
+         "rank": 426,
+         "count_at_merge": 314430,
+         "children": [
+          {
+           "token": "n",
+           "rank": 110
+          },
+          {
+           "token": "t",
+           "rank": 116
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "token": "hesis",
+       "rank": 5349,
+       "count_at_merge": 4549,
+       "children": [
+        {
+         "token": "hes",
+         "rank": 763,
+         "count_at_merge": 87780,
+         "children": [
+          {
+           "token": "he",
+           "rank": 259,
+           "count_at_merge": 7603467,
+           "children": [
+            {
+             "token": "h",
+             "rank": 104
+            },
+            {
+             "token": "e",
+             "rank": 101
+            }
+           ]
+          },
+          {
+           "token": "s",
+           "rank": 115
+          }
+         ]
+        },
+        {
+         "token": "is",
+         "rank": 274,
+         "count_at_merge": 3145782,
+         "children": [
+          {
+           "token": "i",
+           "rank": 105
+          },
+          {
+           "token": "s",
+           "rank": 115
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+  "args": {
+    "models": [
+      "base:d2"
+    ],
+    "prompts": "probes",
+    "prompt_file": null,
+    "temperature": 0.0,
+    "top_k": 50,
+    "max_tokens": 48,
+    "seed": 42,
+    "name": "d2",
+    "interactive": false,
+    "out_dir": "."
+  },
+  "models": [
+    {
+      "spec": "base:d2",
+      "source": "base",
+      "tag": "d2",
+      "params": 12976170,
+      "depth": 2,
+      "d_model": 128,
+      "heads": 1,
+      "window": "L",
+      "step": 420,
+      "val_bpb": 1.3313975192363767
+    }
+  ],
+  "generations": {
+    "base:d2": {
+      "The capital of France is": {
+        "text": "the largest of the world's largest world in the world. The world's largest world's world's world's world's world's world's world's world's world's world's world's world's world's world's world's world's",
+        "seconds": 0.71
+      },
+      "The chemical symbol of gold is": {
+        "text": "a chemical symbol of the chemical symbol of the chemical symbol of the chemical symbol of the chemical symbol of the chemical symbol of the chemical symbol of the chemical symbol of the chemical symbol of the chemical symbol of the chemical symbol of the chemical symbol of",
+        "seconds": 0.2
+      },
+      "The planets of the solar system are": {
+        "text": "the most common in the world. The solar system is the most common, and the solar system is the most common, and the solar system is the most common. The solar system is the most common solar system. The solar system is the",
+        "seconds": 0.2
+      },
+      "The opposite of hot is": {
+        "text": "the most common type of hot water that is the most common type of hot water that is the most common type of hot water. The hot water is the most common type of hot water. The hot water is the most common type of hot",
+        "seconds": 0.21
+      },
+      "If yesterday was Friday, then tomorrow will be": {
+        "text": "the first time to be the first time to be the first time to start the first time. The first time was the first time to start the first time. The first time was first time was first time to start the first time. The",
+        "seconds": 0.22
+      },
+      "If 5*x + 3 = 13, then x is": {
+        "text": "3 = 3 = 3 = 3 = 3 = 3 = 3 = 3 = 3 = 3 = 3 = 3 = 3 = 3 = 3 = 3 =",
+        "seconds": 0.21
+      },
+      "Water boils at a temperature of": {
+        "text": "100 degrees Fahrenheit. The temperature of 100 degrees Fahrenheit is 100 degrees Fahrenheit. The temperature of 100 degrees Fahrenheit is 100 degrees Fahrenheit. The temperature 100 degrees Fahrenheit is 100 degrees",
+        "seconds": 0.21
+      },
+      "The largest ocean on Earth is": {
+        "text": "the largest ocean Earth. The largest ocean Earth is the largest ocean Earth in the world. The largest ocean Earth is the largest ocean Earth in the world. The largest ocean Earth is largest ocean Earth in the world. The ocean Earth is the",
+        "seconds": 0.22
+      }
+    }
+  }
+}
