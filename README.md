@@ -152,9 +152,6 @@ work.
 | `_paths.py` | Path resolution. Honours `NANOCHAT_BASE_DIR` for the depth-2 log, which predates this repo and stayed in the nanochat cache. |
 | `fit_scaling_law.py` | Parses all four pre-training runs from **three different log schemas**, fits `L∞ + a·C^(−α)` by least squares over α with `a` and `L∞` solved linearly, reports residuals, checks the fit out of sample against the published depth-24 point, does the compute-matched comparison, and draws `report/figures/15_depth_series.png`. |
 | `gpu_energy.py` | Trapezoidal integration of the `nvidia-smi` power trace, split at the pre-training / evaluation handover. |
-| `check_report.py` | Static check of `report/main.tex`: dangling `\ref`s, unused labels, missing citations, environment nesting, brace and `$` balance, missing figure files, remaining TODOs. |
-| `page_budget.py` | Prose words excluding floats, against the 8-page limit. |
-| `section_words.py` | Per-section word counts, so cuts can be aimed at the heaviest sections. |
 
 Expected output of `fit_scaling_law.py`:
 
@@ -231,13 +228,6 @@ The same weights score 32.6% or 24.5% on ARC-Easy depending only on what the fin
 cd report && pdflatex main && bibtex main && pdflatex main && pdflatex main
 ```
 
-Check it first:
-
-```bash
-python analysis/check_report.py
-python analysis/page_budget.py
-```
-
 ---
 
 ## 8. Known gaps
@@ -249,12 +239,16 @@ Recorded here rather than papered over.
    produced on a machine we lost access to before the deadline. The numbers in Section 6 trace to
    `docs/interim_results.md`, and the figures were recovered from the plotted PDF. The base-model
    samples survive inside `results/eval/d8_base_eval_20260921_134929.log`.
-2. **Checkpoints are not in the repository.** The report carries a `\TODO{URL}` for the upload.
+2. **Checkpoints are not in the repository** because of their size. They are published separately
+   at <https://huggingface.co/chicoballer/nanochat-d8-assignment1>: the base model, both
+   fine-tuning stages and both controls, with the tokenizer. Optimizer state is not included, so
+   they load for inference and evaluation but cannot be resumed for further training.
 3. **Depth 12 was never run.** The fit predicts 0.850 bpb against 0.821 from the floorless power
    law, which would have separated the two functional forms. We lost the shared node first. The
    prediction is recorded in the report; the test was not performed.
-4. **The report is over the page limit.** `page_budget.py` estimates 11–12 pages against a limit of
-   8. `section_words.py` shows where to cut.
+4. **A temperature-sweep table was cut for length.** The brief allows 8 pages including figures
+   and references. The five verbatim excerpts it held are quoted in the prose of Section 7, which
+   is where the argument was made anyway.
 5. **Benchmark-sweep energy was never logged**, so Task 4B reports the training energy and leaves
    that term open rather than estimating it.
 
