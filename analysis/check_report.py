@@ -14,7 +14,8 @@ with open(os.path.join(ROOT, "main.bib"), encoding="utf-8") as fh:
 
 labels = set(re.findall(r"\\label\{([^}]*)\}", s))
 refs = {r.strip() for g in re.findall(r"\\(?:[cC]ref|ref)\{([^}]*)\}", s) for r in g.split(",")}
-cites = {c.strip() for g in re.findall(r"\\cite[tp]?\{([^}]*)\}", s) for c in g.split(",")}
+# the optional argument in \citep[\S5.3]{key} has to be skipped, or the key reads as unused
+cites = {c.strip() for g in re.findall(r"\\cite[tp]?(?:\[[^\]]*\])?\{([^}]*)\}", s) for c in g.split(",")}
 bib = set(re.findall(r"@\w+\{([^,]+),", bibsrc))
 
 print("dangling refs :", sorted(refs - labels) or "none")
