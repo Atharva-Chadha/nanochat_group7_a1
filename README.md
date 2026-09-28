@@ -225,7 +225,7 @@ The same weights score 32.6% or 24.5% on ARC-Easy depending only on what the fin
 
 ## 7. `report/`
 
-`main.tex` plus `main.bib` (24 entries) and 13 figures, of which the report uses five. Build:
+`main.tex` plus `main.bib` (24 entries) and 13 figures, of which the report uses four. Build:
 
 ```bash
 cd report && pdflatex main && bibtex main && pdflatex main && pdflatex main

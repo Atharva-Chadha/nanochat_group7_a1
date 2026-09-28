@@ -11,8 +11,11 @@ s = open(os.path.join(ROOT, "main.tex"), encoding="utf-8").read()
 body = s.split(r"\appendix")[0]
 body = body.split(r"\begin{document}")[1]
 
-floats = re.findall(r"\\begin\{(table|figure)\}.*?\\end\{\1\}", body, re.S)
-prose = re.sub(r"\\begin\{(table|figure)\}.*?\\end\{\1\}", " ", body, flags=re.S)
+# the star has to be in the pattern: a table* is the most expensive kind of float,
+# and without it the cell text was being counted as prose
+FLOAT = r"\\begin\{(table|figure)(\*?)\}.*?\\end\{\1\2\}"
+floats = [m[0] for m in re.findall(FLOAT, body, re.S)]
+prose = re.sub(FLOAT, " ", body, flags=re.S)
 prose = re.sub(r"\\(bibliography|bibliographystyle)\{[^}]*\}", " ", prose)
 
 
