@@ -222,11 +222,9 @@ The same weights score 32.6% or 24.5% on ARC-Easy depending only on what the fin
 
 ## 7. `report/`
 
-`main.tex` plus `main.bib` (24 entries) and 13 figures, of which the report uses four. Build:
-
-```bash
-cd report && pdflatex main && bibtex main && pdflatex main && pdflatex main
-```
+The submitted report as a PDF, and the four figures it includes. Each one is reproduced by a script
+in this repository: the merge tree by `scripts/13_merge_tree.py`, the pre-training curve and the
+stage-1 curve by `scripts/plot_curves.py`, and the depth series by `analysis/fit_scaling_law.py`.
 
 ---
 
